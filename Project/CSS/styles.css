@@ -86,17 +86,31 @@
     }
 }
 
+
+
 .hero {
     width: 100%;
     height: 968px;
     justify-content: center;
     display: flex;
     align-items: center;
-    background-image: url(../img/hero__image.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #1e1e1e;
+}
+
+.parallax {
+    background-image: url(../img/hero__image.webp);
+    min-height: 968px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .overlay {
