@@ -388,7 +388,9 @@
     font-size: 12px;
     font-weight: 200;
 }
+
 /* Login Seccion */
+
 .container {
     display: flex;
     height: 100vh;
@@ -413,25 +415,27 @@
 }
 
 .login-box h2 {
-    color: white;
-    font-size: 2.5rem;
+    color: #f3f3f3;
+    font-size: 48px;
+    font-family: Inter, sans-serif;
     margin-bottom: 20px;
     font-weight: 500;
 }
 
-.form-group {
+.form__group {
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
-.form-group label {
+.form__group label {
     display: block;
-    color: white;
+    color: #f3f3f3;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
 }
 
-.form-group input {
+.form__group input {
     width: 100%;
     padding: 12px;
     background-color: rgb(56, 56, 56);
@@ -442,19 +446,25 @@
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
 }
-.form-group input:focus {
-    border-color: #007bff; /* Cambia el color del borde cuando el campo esté enfocado */
+
+.form__group input:focus {
+    border-color: #9c9797; /* Cambia el color del borde cuando el campo esté enfocado */
     background-color: rgb(61, 61, 61); /* Cambia el fondo al enfocar */
 }
 
 
-.forgot-password {
+.forgot__password {
+    font-family: Inter, sans-serif;
     color: #999;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 12px;
     display: block;
     margin-top: 10px;
     margin-bottom: 35px;
+}
+
+.forgot__password:hover {
+    color: #f3f3f3;
 }
 
 .btn {
@@ -468,6 +478,7 @@
     cursor: pointer;
     margin: 5%;
     margin-bottom: 10%;
+    font-family: Inter,sans-serif;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
@@ -479,25 +490,32 @@
     outline: none; 
 }
 
-.social-login {
+.continue__with {
+    color: #f3f3f3;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    text-align: center;
+}
+
+.social__login {
     margin-top: 30px;
     text-align: center;
 }
 
-.social-login  {
+.social__login  {
     color: white;
     margin: 20px 0;
     font-size: 0.9rem;
 }
 
-.social-buttons {
+.social__buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 7%;
 }
 
-.social-buttons button {
+.social__buttons button {
     width: 40px;
     height: 40px;
     border-radius: 60%;
@@ -507,14 +525,50 @@
     cursor: pointer;
 }
 
+.social__buttons button:hover {
+    background-color: rgb(75, 75, 75);
+}
+
 .register {
+    font-family: Inter, sans-serif;
     text-align: center;
-    color: white;
+    color: #999;
     font-size: 0.9rem;
     margin-top: 20%;
 }
 
 .register a {
-    color: white;
+    color: #f3f3f3;
     text-decoration: none;
 }
+
+.register a {
+    display: inline-block;
+    position: relative;
+}
+
+.register a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #f3f3f3;
+    transition: transform 0.25s ease-out;
+}
+
+.register a:hover::after {
+    transform: scaleX(1);
+}
+
+.register a::after {
+    transform-origin: bottom center;
+}
+
+.register a:hover::after {
+    transform-origin: bottom center;
+}
+
+
