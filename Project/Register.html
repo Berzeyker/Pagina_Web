@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
@@ -12,8 +12,12 @@
  <div class="container">
         <div class="image-box"></div>
         <div class="login-box">
-            <h2>Login</h2>
+            <h2>Register</h2>
             <form>
+                <div class="form__group">
+                    <label>Username</label>
+                    <input type="email" placeholder="username">
+                </div>
                 <div class="form__group">
                     <label>Email</label>
                     <input type="email" placeholder="username@gmail.com">
@@ -23,10 +27,14 @@
                     <label>Password</label>
                     <input type="password" placeholder="Password">
                 </div>
+            
+                <div class="form__group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password">
+                </div>
                 
-                <a href="#" class="forgot__password">Forgot Password?</a>
                 <center>
-                <button type="submit" class="btn">Log in</button>
+                <button type="submit" class="btn">Sign In</button>
                 </center>
                 <p class="continue__with">Or Continue With</p>
                 
