@@ -430,6 +430,22 @@
         font-weight: 500;
     }
 
+    .register-box {
+        width: 45%;
+        padding: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .register-box h2 {
+        color: #f3f3f3;
+        font-size: 48px;
+        font-family: Inter, sans-serif;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
     .form__group {
         margin-top: 40px;
         margin-bottom: 10px;
