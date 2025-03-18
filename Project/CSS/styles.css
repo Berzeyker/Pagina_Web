@@ -583,5 +583,95 @@
     .register a:hover::after {
         transform-origin: bottom center;
     }
+/* Account */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    display: flex;
+    background-color: #1a1a1a;
+    color: white;
+}
 
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #222;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.settings-menu {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    height: 100vh;
+}
+
+.settings-menu ul {
+    list-style: none;
+}
+
+.settings-menu ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
