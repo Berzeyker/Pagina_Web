@@ -51,8 +51,158 @@
 
 .content {
     background-color: #1e1e1e;
-    height: 100vh;
+    height: 100%;
     width: 82.5%;
     margin-left: 17.5%;
     padding: 56px 56px 56px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchbar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 18px;
+    background: #303030;
+    width: 50%;
+    transition: background 0.25s;
+}
+
+.searchbar:focus-within {
+    background: #383838;
+    border: none;
+}
+
+.search__input {
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    color:#f3f3f3;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+.search__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.search__input::placeholder,
+.search__icon {
+    color: rgba(219, 219, 219, 0.5);
+}
+
+.shoppingcart {
+    width: max-content;
+}
+
+.specialoffers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.specialoffers h2 {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    color: #f3f3f3;
+}
+
+.specialoffers__carousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.expanded {
+    width: 300px;
+    height: 250px;
+    transform: scale(1.2);
+}
+
+.featured {
+    width: 100%;
+    height: 60%;
+}
+
+.featured__carousel {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    align-items: top;
+    margin-bottom: 20px;
+}
+
+.featured__image {
+    width: 70%;
+    height: 500px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.featured__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured__info {
+    width: 30%;
+    height: 50%;
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    color:#f3f3f3;
+}
+
+.featured__info h2 {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    color: #f3f3f3;
+}
+
+.swiper {
+    width: 80%;
+}
+
+.swiper-slide {
+    background: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.swiper-slide:hover {
+    background: #666;
 }
