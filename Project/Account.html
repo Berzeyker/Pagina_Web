@@ -4,52 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Cuenta</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/account.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2>MyLogo</h2>
-        <ul>
-            <li>Store Page</li>
-            <li>Library</li>
-            <li>Community</li>
-            <li>News</li>
-        </ul>
-    </div>
-
-    <div class="main-content">
-        <h1>My Account</h1>
-        <div class="profile">
-            <div class="avatar"></div>
-            <p>Edit Avatar</p>
+    <div class="container">
+        <!-- Sidebar izquierdo -->
+        <div class="sidebar">
+            <div class="avatar-container-left">
+                <div class="avatar-left"></div>
+            </div>
+            <ul class="menu">
+                <li>Store Page</li>
+                <li>Library</li>
+                <li>Community</li>
+                <li>News</li>
+            </ul>
         </div>
 
-        <div class="section">
-            <h2>Account Name</h2>
-            <label>Current Account Name</label>
-            <input type="text" placeholder="Example" disabled>
-
-            <label>New Account Name</label>
-            <input type="text" placeholder="Example">
+        <!-- Contenido central -->
+        <div class="content">
+            <h1 class="title">My Account</h1>
+            
+            <div class="avatar-container">
+                <div class="avatar"></div>
+                <div class="edit-avatar">Edit Avatar</div>
+            </div>
+            
+            <div class="account-section">
+                <h2 class="section-title">Account Name</h2>
+                <div class="form-row">
+                    <div class="form-label">Current Account Name</div>
+                    <input type="text" class="form-input" placeholder="Quimbap">
+                </div>
+                <div class="form-row">
+                    <div class="form-label">New Account Name</div>
+                    <input type="text" class="form-input" placeholder="Quimbap">
+                </div>
+            </div>
+            
+            <div class="account-section">
+                <h2 class="section-title">Email</h2>
+                <div class="form-row">
+                    <div class="form-label">Current Email</div>
+                    <input type="text" class="form-input" value="Example" disabled>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">New Email</div>
+                    <input type="text" class="form-input" placeholder="Example">
+                </div>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Email</h2>
-            <label>Current Email</label>
-            <input type="email" placeholder="Example" disabled>
-
-            <label>New Email</label>
-            <input type="email" placeholder="Example">
+        <!-- Sidebar derecho -->
+        <div class="settings">
+            <ul class="settings-list">
+                <li>Personal Information</li>
+                <li>Payment Methods</li>
+                <li>Wishlist</li>
+                <li>Security & Login</li>
+            </ul>
         </div>
-    </div>
-
-    <div class="settings-menu">
-        <ul>
-            <li>Personal Information</li>
-            <li>Payment Methods</li>
-            <li>Wishlist</li>
-            <li>Security & Login</li>
-        </ul>
     </div>
 </body>
 </html>
