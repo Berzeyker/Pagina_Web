@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #1a1a1a;
+    background-color: #1e1e1e;
     color: white;
     height: 100vh;
     overflow: hidden;
@@ -21,9 +21,14 @@ body {
 
 /* Sidebar izquierdo */
 .sidebar {
-    width: 180px;
-    background-color: #1a1a1a;
-    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    background-color: #1e1e1e;
+    padding: 56px;
+    gap: 30px;
 }
 .avatar-container-left {
     display: flex;
@@ -40,21 +45,54 @@ body {
 
 
 .menu {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 50px;
 }
 
-.menu li {
+.menu a {
     color: #F3F3F3;
-    margin-bottom: 35px;
-    font-size: 18px;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    width: max-content;
     cursor: pointer;
+}
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #f3f3f3;
+    transition: transform 0.25s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu a::after {
+    transform-origin: bottom center;
+}
+
+.menu a:hover::after {
+    transform-origin: bottom center;
 }
 
 /* Contenido central */
 .content {
     flex: 1;
-    background-color: #1a1a1a;
-    padding: 40px;
+    background-color: #1e1e1e;
+    width: 85%;
+    margin-left: 15%;
+    padding: 56px 56px 56px 0px;
 }
 
 .title {
