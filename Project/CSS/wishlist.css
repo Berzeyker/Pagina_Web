@@ -93,6 +93,7 @@ body {
 .title {
     font-size: 35px;
     margin-bottom: 40px;
+    padding-left: 20%;
     text-align: auto; /* Añade esta línea para centrar */
     width: 100%; /* Asegura que ocupe todo el ancho */
 }
@@ -101,6 +102,8 @@ body {
     max-width: 700px;
     width: 100%;
     margin: 0 auto 0 0; /* Cambia a margen izquierdo automático */
+    margin-left: 20%;
+
     background-color: #252525;
     border-radius: 5px;
     padding: 20px;
