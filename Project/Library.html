@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=account_circle" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=shopping_cart" />
+    <link rel="stylesheet" href="CSS/Library.css">
+</head>
+
+<body>
+    <div class="main__container">
+        <!-- Sidebar izquierdo existente -->
+        <div class="sidebar">
+            <div class="avatar-container-left">
+                <div class="avatar-left">
+                    <img src="img/Games/Cyberpunk.jpg" alt="Avatar">
+                </div>
+            </div>
+            <div class="sidebar__container">
+                <a href="#">Store Page</a>
+                <a href="#">Library</a>
+                <a href="#">Community</a>
+                <a href="#">News</a>
+            </div>
+        </div>
+
+        <!-- Contenedor principal modificado -->
+        <div class="main-content">
+            <!-- Contenido central existente -->
+            <div class="content">
+                <div class="navbar">
+                    <div class="searchbar">
+                        <span class="search__icon material-symbols-outlined">search</span>
+                        <input class="search__input" type="search" placeholder="Search">
+                    </div>
+                    <!-- <div class="shoppingcart">
+                        <span class="shoppingcart__icon material-symbols-outlined">shopping_cart</span>
+                    </div> -->
+                    <div class="account"></div>
+                </div>
+                
+                <div class="allgames">
+                    <h2>All games</h2>
+                    <div class="games-container">
+                        <!-- Tus juegos existentes... -->
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/r6.jpeg" alt="Rainbow Six® Siege">
+                            <div class="game-title">Rainbow Six® Siege</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/GreedFall.jpg" alt="GreedFall">
+                            <div class="game-title">GreedFall</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/remnant2.jpg" alt="Remnant 2">
+                            <div class="game-title">Remnant 2</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Resident2.jpg" alt="Resident2">
+                            <div class="game-title">Resident Evil 2</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
+                            <div class="game-title">Cyberpunk 2077</div>
+                            <div class="game-detail">Details</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuevo sidebar derecho con filtros -->
+            <div class="right-sidebar">
+                <!-- Barra de búsqueda -->
+                <div class="filter-search-container">
+                    <div class="filter-search">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                        <input type="text" class="search-input" placeholder="Search games...">
+                    </div>
+                </div>
+            
+                <!-- Filtros desplegables -->
+                <div class="filters-container">
+                    <!-- Filtro Types -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <h3>Types</h3>
+                           
+                        </div>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" checked>
+                                <span>All</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Games</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>DLCs</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Early Access</span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <!-- Filtro Genre -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <h3>Genre</h3>
+                            
+                        </div>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" checked>
+                                <span>All</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Action</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Adventure</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>RPG</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Strategy</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Shooter</span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <!-- Filtro Features -->
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <h3>Features</h3>
+                           
+                        </div>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" checked>
+                                <span>All</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Single Player</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Multiplayer</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>Co-op</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox">
+                                <span>VR</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <script>
+        function toggleFilter(header) {
+            const section = header.parentElement;
+            section.classList.toggle('active');
+            
+            // Cerrar otros filtros al abrir uno nuevo (opcional)
+            document.querySelectorAll('.filter-section').forEach(s => {
+                if (s !== section) s.classList.remove('active');
+            });
+        }
+        
+        // Manejar el estado "All" (selección exclusiva)
+        document.querySelectorAll('.filter-option input').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.parentElement.textContent.trim() === 'All' && this.checked) {
+                    const options = this.closest('.filter-options');
+                    options.querySelectorAll('input').forEach(input => {
+                        if (input !== this) input.checked = false;
+                    });
+                } else if (this.checked) {
+                    const options = this.closest('.filter-options');
+                    options.querySelector('input').checked = false;
+                }
+            });
+        });
+        </script>
+</body>
+</html>

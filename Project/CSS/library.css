@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+/* Añade esto al final de tu CSS */
+body {
+    background-color: #1e1e1e;
+    color: #f3f3f3;
+}
+
+.main__container {
+    background-color: #1e1e1e !important;
+}
+
+.sidebar, .content, .right-sidebar {
+    background-color: inherit;
+}
+
+/* Reset de colores no deseados */
+.filter-section, .filter-option, .filter-search {
+    background-color: #252525 !important;
+    color: #f3f3f3 !important;
+}
+
+.avatar-left {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.avatar-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    background-color: #1e1e1e;
+    padding: 56px;
+}
+
+.sidebar__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.sidebar h2 {
+    color: #f3f3f3;
+    font-size: 28px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    margin-bottom: 6rem;
+}
+
+.sidebar a {
+    color: #f3f3f3;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    width: max-content;
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #f3f3f3;
+    transition: transform 0.25s ease-out;
+}
+
+.sidebar a:hover::after {
+    transform: scaleX(1);
+}
+
+.sidebar a::after {
+    transform-origin: bottom center;
+}
+
+.sidebar a:hover::after {
+    transform-origin: bottom center;
+}
+
+.main-content {
+    display: flex;
+    width: 85%;
+    margin-left: 15%;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #1e1e1e;
+    padding: 56px 56px 56px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 100%;
+    width: calc(100% - 300px);
+}
+
+.navbar {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchbar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 18px;
+    background: #303030;
+    width: 50%;
+    transition: background 0.25s;
+}
+
+.searchbar:focus-within {
+    background: #383838;
+    border: none;
+}
+
+.search__input {
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    color:#f3f3f3;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+.search__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.search__input::placeholder,
+.search__icon {
+    color: rgba(219, 219, 219, 0.5);
+}
+
+.shoppingcart {
+    width: max-content;
+}
+
+.allgames {
+    margin-top: 40px;
+    color: #f3f3f3;
+    font-family: Inter, sans-serif;
+}
+
+.allgames h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #303030;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    background-color: #383838;
+    transform: translateY(-10px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-title {
+    padding: 10px;
+    font-size: 18px;
+    text-align: auto;
+}
+
+.game-detail{
+    padding: 10px;
+    font-size: 14px;
+    text-align: auto;
+}
+
+/*sidebar derecho */
+.right-sidebar {
+    width: 280px;
+    padding: 20px 15px;
+    position: sticky;
+    top: 96px; /* 56px (navbar) + 20px (padding-top) + 20px (extra) */
+    height: calc(100vh - 116px);
+    overflow-y: auto;
+    margin-left: 30px;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+/* Elimina espacios no deseados */
+.content {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.allgames {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Estilos para los filtros desplegables */
+.filter-section {
+    margin-bottom: 15px;
+    background: #252525;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-header h3 {
+    color: #f3f3f3;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-header .arrow {
+    color: #b0b0b0;
+    transition: transform 0.3s ease;
+}
+
+.filter-options {
+    display: none;
+    padding: 5px 15px 15px;
+}
+
+.filter-section.active .filter-options {
+    display: block;
+}
+
+.filter-section.active .arrow {
+    transform: rotate(180deg);
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-option input {
+    margin-right: 10px;
+    accent-color: #0078f2;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.filter-option:hover {
+    color: #ffffff;
+}
+/* Contenedor principal de la barra de búsqueda */
+.filter-search-container {
+    padding: 0 10px 15px 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #303030;
+}
+
+/* Barra de búsqueda */
+.filter-search {
+    display: flex;
+    align-items: center;
+    background: #252525;
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #383838;
+}
+
+.filter-search:hover {
+    border-color: #484848;
+    background: #2a2a2a;
+}
+
+.filter-search:focus-within {
+    border-color: #0078f2;
+    background: #2a2a2a;
+}
+
+/* Icono de búsqueda */
+.filter-search .search-icon {
+    color: #b0b0b0;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* Input de búsqueda */
+.filter-search .search-input {
+    background: transparent;
+    border: none;
+    color: #f3f3f3;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+.filter-search .search-input::placeholder {
+    color: #6d6d6d;
+    font-weight: 300;
+}
+
+/* Efecto para cuando está enfocado */
+.filter-search:focus-within .search-icon {
+    color: #0078f2;
+}
