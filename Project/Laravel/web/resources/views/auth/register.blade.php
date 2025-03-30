@@ -6,29 +6,44 @@
     <div class="container">
         <div class="register-box">
             <h2>Register</h2>
-            <form>
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form method="POST" action="{{ route('register') }}">
+                @csrf 
+
                 <div class="form__group">
                     <label>Username</label>
-                    <input type="email" placeholder="username">
+                    <input type="text" placeholder="username" name="username" value="{{old('username')}}" required>
                 </div>
+
                 <div class="form__group">
                     <label>Email</label>
-                    <input type="email" placeholder="username@gmail.com">
+                    <input type="email" name="email" placeholder="username@gmail.com" alue="{{old('email')}}" required>
                 </div>
 
                 <div class="form__group">
                     <label>Password</label>
-                    <input type="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
 
                 <div class="form__group">
                     <label>Confirm Password</label>
-                    <input type="password" placeholder="Password">
+                    <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
                 </div>
 
                 <center>
                     <button type="submit" class="btn">Sign In</button>
                 </center>
+
                 <p class="continue__with">Or Continue With</p>
 
                 <div class="social__buttons">
