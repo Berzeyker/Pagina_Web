@@ -28,7 +28,13 @@
                         <span class="error-message">{{ $message }}</span>
                     @enderror
                 </div>
-
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            <p>{{ $error }}</p>
+                        @endforeach
+                    </div>
+                @endif
                 <!-- Remember me checkbox -->
                 <div class="form__group">
                     <label for="remember_me">
@@ -36,7 +42,6 @@
                         Remember Me
                     </label>
                 </div>
-
                 <a href="{{ route('password.request') }}" class="forgot__password">Forgot Password?</a>
 
                 <center>

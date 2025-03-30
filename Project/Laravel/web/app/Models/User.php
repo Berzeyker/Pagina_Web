@@ -18,18 +18,20 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
-        'password',
+        'password_hash',
     ];
-
+    public function getAuthPassword() {
+        return $this->password_hash;
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password',
+        'password_hash',
         'remember_token',
     ];
 

@@ -601,5 +601,11 @@
     .register a:hover::after {
         transform-origin: bottom center;
     }
-
-
+    .alert{
+        color: red;
+        font-family: Inter, sans-serif;
+    }
+    .error-message{
+        color: red;
+        font-family: Inter, sans-serif;
+    }

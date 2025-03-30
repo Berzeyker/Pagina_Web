@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        error_reporting(E_ALL ^ E_DEPRECATED);
     }
 
     /**
