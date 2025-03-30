@@ -109,7 +109,7 @@
     }
 
     .parallax {
-        background-image: url("{{ asset('images/hero__image.webp') }}");
+        background-image: url("../images/hero__image.webp");
         min-height: 968px;
         width: 100%;
         background-attachment: fixed;
@@ -207,7 +207,7 @@
         justify-content: center;
         display: flex;
         align-items: center;
-        background-image: url("{{ asset('images/topseller__collage.jpg') }}");
+        background-image: url("../images/topseller__collage.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -408,7 +408,7 @@
     }
 
     .image-box {
-        background-image: url('/images/games.png');
+        background-image: url('../images/games.png');
         width: 83%;
         height: 100vh;
         background-size: cover;

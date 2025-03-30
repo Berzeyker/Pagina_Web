@@ -52,7 +52,7 @@
                 </div>
 
                 <p class="register register1">
-                    Already have an account? <a href="Login.html">Log in</a>
+                    Already have an account? <a onclick="window.location.href='{{ route('login') }}'">Log in</a>
                 </p>
             </form>
         </div>
