@@ -1,0 +1,362 @@
+    /* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px; /* Ancho máximo para pantallas grandes */
+    height: 100vh;
+}
+
+/* Barra lateral izquierda */
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    min-width: 200px; /* Ancho mínimo */
+    height: 100vh;
+    position: relative; /* Cambiado de fixed a relative */
+    background-color: #1e1e1e;
+    padding: 56px;
+    gap: 30px;
+}
+
+.avatar-left {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden; /* Esto asegura que la imagen se recorte circularmente */
+    margin-bottom: 15px;
+}
+
+.avatar-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen cubra todo el espacio manteniendo proporciones */
+}
+
+.menu-left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 50px;
+}
+
+.menu-left a {
+    color: #F3F3F3;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    cursor: pointer;
+}
+
+.menu-left a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #f3f3f3;
+    transition: transform 0.25s ease-out;
+}
+
+.menu-left a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-left a::after {
+    transform-origin: bottom center;
+}
+
+.menu-left a:hover::after {
+    transform-origin: bottom center;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    background-color: #1e1e1e;
+    width: 85%;
+    margin-left: 15%;
+    padding: 56px 56px 56px 0px;
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 515px; /* Mismo ancho que payment-section */
+    text-align: center; /* Título centrado */
+}
+
+/* Sección de Payment Methods */
+.payment-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.payment-instruction {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.payment-method {
+    margin-bottom: 40px;
+}
+
+.payment-card {
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-left: 4px solid #4CAF50;
+}
+
+.payment-card:hover {
+    background-color: #333;
+}
+
+.card-info {
+    font-size: 18px;
+}
+
+.payment-settings {
+    margin-bottom: 40px;
+    background-color: #252525;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.settings-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: normal;
+    color: #f3f3f3;
+}
+
+.setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.setting-option:last-child {
+    border-bottom: none;
+}
+
+.option-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.option-description {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* Switches */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Botón */
+.add-payment-btn {
+    background-color: #52218E;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add-payment-btn:hover {
+    background-color: #45a049;
+}
+
+/* Barra lateral derecha */
+.right-sidebar {
+    width: 250px;
+    height: 700px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.settings-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.settings-list li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+}
+
+.settings-list li:hover {
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Estilo para el ítem activo en el menú derecho */
+/* .settings-list li.active {
+    background-color: #52218E;
+    border-radius: 3px;
+} */
+    
+    /* Estilos para el menú de la tarjeta */
+    .payment-card {
+        position: relative;
+        background-color: #252525;
+        padding: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-left: 4px solid #4CAF50;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-menu {
+        position: relative;
+    }
+
+    .menu-arrow {
+        font-size: 12px;
+        color: #aaa;
+        transition: transform 0.3s;
+    }
+
+    .menu-options {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: #252525;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 150px;
+        z-index: 10;
+        display: none;
+        margin-top: 5px;
+    }
+
+    .menu-option {
+        padding: 12px 15px;
+        font-size: 14px;
+        color: #f3f3f3;
+        transition: background-color 0.2s;
+    }
+
+    .menu-option:hover {
+        background-color: #333;
+    }
+
+    .menu-option:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .menu-option:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    /* Clase para cuando el menú está abierto */
+    .payment-card.active .menu-options {
+        display: block;
+    }
+
+    .payment-card.active .menu-arrow {
+        transform: rotate(180deg);
+        color: #f3f3f3;
+    }
