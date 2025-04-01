@@ -3,7 +3,6 @@
 @section('title', 'Game')
 
 @section('content')
-<link rel="stylesheet" href="{{ ('CSS/game.css') }}">
 
 <div class="main__container">
     <div class="sidebar">
