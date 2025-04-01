@@ -124,13 +124,27 @@ body {
     appearance: none;
 }
 
-.search__input::placeholder,
-.search__icon {
-    color: rgba(219, 219, 219, 0.5);
+.navbar__icons {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
 }
 
-.shoppingcart {
-    width: max-content;
+.shoppingcart__icon {
+    width: 50px;
+    height: 100%;
+    border-radius: 50px;
+    background: #303030;
+}
+
+.account__icon {
+    width: 50px;
+    height: 100%;
+    border-radius: 50px;
+    background: #303030;
 }
 
 .showcase {

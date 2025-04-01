@@ -19,14 +19,16 @@
         <div class="content">
             <div class="navbar">
                 <div class="searchbar">
-                    <span class="search__icon material-symbols-outlined">search</span>
+                    <img src="{{ asset('svg/logo.svg') }}" alt="">
                     <input class="search__input" type="search" placeholder="Search">
                 </div>
-                <div class="shoppingcart">
-                    <span class="shoppingcart__icon material-symbols-outlined">shopping_cart</span>
-                </div>
-                <div class="account">
-
+                <div class="navbar__icons">
+                    <div class="shoppingcart__icon">
+                        <img src="{{ asset('svg/logo.svg') }}" alt="">
+                    </div>
+                    <div class="account__icon">
+                        <img src="{{ asset('svg/logo.svg') }}" alt="">
+                    </div>
                 </div>
             </div>
             <div class="showcase">
