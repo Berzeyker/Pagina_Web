@@ -172,10 +172,6 @@ body {
     transition: background-color 0.3s;
 }
 
-.navbar__btn:hover {
-    background-color: #292929;
-}
-
 .allgames {
     margin-top: 40px;
     color: #f3f3f3;
