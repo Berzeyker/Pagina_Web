@@ -9,7 +9,7 @@
     <div class="sidebar">
             <h2>MyLogo</h2>
             <div class="sidebar__container">
-                <a href="#">Store Page</a>
+                <a href="#" onclick="window.location.href='{{ route('home') }}'">Store Page</a>
                 <a href="#">Library</a>
                 <a href="#">Community</a>
                 <a href="#">News</a>
