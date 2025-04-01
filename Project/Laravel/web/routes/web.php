@@ -14,17 +14,24 @@ use App\Http\Controllers\RoleController;
 */
 
 Route::get('/', function () {
-    return view('home'); // Change 'home' to match your new Blade file
+    return view('/home'); // Change 'home' to match your new Blade file
 })->name('home');
+
 Route::get('/login', function () {
-    return view('login');  // this will load login.blade.php
+    return view('game');  // this will load login.blade.php
 });
+
 Route::get('/register', function () {
-    return view('register');  // this will load login.blade.php
+    return view('game');  // this will load login.blade.php
 });
+
 Route::get('/account', function () {
     return view('account');
 })->name('account');
+
+Route::get('/game', function () {
+    return view('game');
+})->middleware('auth')->name('game');
 
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
@@ -38,7 +45,6 @@ Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, '
 // Login
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
-Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 // PROTECTED ROUTES
 
