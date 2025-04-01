@@ -3,6 +3,8 @@
 @section('title', 'Login')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
     <div class="container">
         <div class="image-box"></div>
         <div class="login-box">

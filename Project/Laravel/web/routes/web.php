@@ -41,6 +41,14 @@ Route::get('/library', function () {
     return view('library');
 })->middleware('auth')->name('library');
 
+Route::get('/payment', function () {
+    return view('payment');
+})->middleware('auth')->name('payment');
+
+Route::get('/shoppingcart', function () {
+    return view('shoppingcart');
+})->middleware('auth')->name('shoppingcart');
+
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
 Route::get('update-role',[RoleController::class, 'update']);

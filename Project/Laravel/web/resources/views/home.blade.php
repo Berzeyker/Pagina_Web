@@ -6,6 +6,8 @@
 
     @include('partials.navbar') {{-- Including the navbar --}}
 
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
     <div class="hero">
         <div class="parallax">
             <div class="overlay"></div>

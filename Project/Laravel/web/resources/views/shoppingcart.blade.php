@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=account_circle" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=shopping_cart" />
-<link rel="stylesheet" href="{{ asset('css/shopping_cart.css') }}">
+<link rel="stylesheet" href="{{ asset('css/shoppingcart.css') }}">
 
 <div class="main__container">
     <!-- Sidebar izquierdo existente -->
