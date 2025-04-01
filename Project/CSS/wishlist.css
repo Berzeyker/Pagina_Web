@@ -94,8 +94,8 @@ body {
     font-size: 35px;
     margin-bottom: 40px;
     padding-left: 20%;
-    text-align: auto; /* Añade esta línea para centrar */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    text-align: auto;
+    width: 100%; 
 }
 /* Estilos para la Wishlist */
 .wishlist-section {
