@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,51 +6,58 @@
 
 body {
     display: flex;
-    font-family: 'Inter', sans-serif;
-    background-color: #1e1e1e;
-    color: #f3f3f3;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .main__container {
     display: flex;
-    flex-grow: 1;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
 }
 
 .sidebar {
-    width: 250px;
+    width: 15vw;
     height: 100vh;
     position: fixed;
     background-color: #1e1e1e;
-    padding: 3.5rem 2rem;
+    padding: 3rem;
+}
+
+.sidebar__container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 3rem;
 }
 
 .sidebar h2 {
+    color: #f3f3f3;
     font-size: 1.75rem;
+    font-family: Inter, sans-serif;
     font-weight: 400;
+    margin-bottom: 6rem;
 }
 
 .sidebar a {
+    color: #f3f3f3;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-family: Inter, sans-serif;
     text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
     position: relative;
-    transition: color 0.25s ease-out;
+    width: max-content;
 }
 
 .sidebar a::after {
     content: '';
     position: absolute;
     width: 100%;
+    transform: scaleX(0);
     height: 1px;
-    background-color: #f3f3f3;
     bottom: 0;
     left: 0;
-    transform: scaleX(0);
+    background-color: #f3f3f3;
     transition: transform 0.25s ease-out;
     transform-origin: bottom center;
 }
@@ -63,25 +68,28 @@ body {
 
 .content {
     flex-grow: 1;
-    margin-left: 250px;
-    padding: 3.5rem 6rem 3.5rem 0;
+    background-color: #1e1e1e;
+    width: calc(100vw - 15vw);
+    margin-left: 15vw;
+    padding: 3rem 6rem 3rem 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    overflow-y: auto;
+    min-height: 100vh;
 }
 
 .navbar {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 .searchbar {
     display: flex;
     align-items: center;
     padding: 0.875rem;
-    border-radius: 1.125rem;
+    border-radius: 18px;
     background: #303030;
     width: 50%;
     transition: background 0.25s;
@@ -89,28 +97,32 @@ body {
 
 .searchbar:focus-within {
     background: #383838;
+    border: none;
 }
 
 .search__input {
     font-size: 1rem;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #f3f3f3;
-    flex-grow: 1;
+    font-family: Inter, sans-serif;
+    color:#f3f3f3;
     margin-left: 0.875rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
 }
 
 .navbar__icons {
+    width: 18.75rem;
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    margin: 0 3.125rem;
 }
 
 .navbar__btn {
     width: 3rem;
     height: 3rem;
+    border: none;
     border-radius: 50%;
-    background: #303030;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,39 +135,98 @@ body {
 }
 
 .showcase {
+    width: 100%;
     margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.875rem;
+    gap: 2rem;
+    padding: 0 5%;
+}
+
+.showcase h2 {
+    font-family: Inter, sans-serif;
+    font-size: 1.625rem;
+    font-weight: 300;
+    color: #f3f3f3;
 }
 
 .game__info {
+    width: 100%;
+    height: auto;
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2%;
 }
 
 .carousel {
-    flex: 2;
+    flex-grow: 2;
+    height: 100%;
     border-radius: 10px;
     background: #2c2c2c;
     overflow: hidden;
 }
 
-.game__description {
-    flex: 1;
-    padding: 1rem;
-    background: #2c2c2c;
+.main__image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
     border-radius: 10px;
 }
 
+.game__description {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.game__description p {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    color: #f3f3f3;
+    font-weight: 300;
+}
+
 .purchase {
-    display: flex;
-    justify-content: space-between;
+    max-width: 60vw;
+    border-radius: 10px;
     padding: 1.5rem;
     background: #2c2c2c;
-    border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.purchase h3 {
+    padding-top: 0.3rem;
+    font-family: Inter, sans-serif;
+    color: #f3f3f3;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    max-width: 18.75rem;
+}
+
+.price__text {
+    display: flex;
+    width: 12.5rem;
+    background: #1e1e1e;
+    border-radius: 5px 0 0 5px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.price__text h4 {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    color: #f3f3f3;
+    font-weight: 300;
 }
 
 .add-cart-btn {
@@ -164,27 +235,91 @@ body {
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%;
+    max-width: 18.75rem;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .add-cart-btn:hover {
     background-color: #45a049;
 }
 
+.divider {
+    height: 1px;
+    background-color: #444;
+    margin: 10px 0;
+}
+
 .about {
-    margin-top: 2rem;
-    width: 70%;
+    max-width: 60vw;
+    margin-top: 3%;
 }
 
 .about h2 {
-    font-size: 1.75rem;
+    font-family: Inter, sans-serif;
+    font-size: 1.625rem;
     font-weight: 300;
+    color: #f3f3f3;
 }
 
 .about p {
+    font-family: Inter, sans-serif;
     font-size: 1rem;
     font-weight: 200;
+    color: #f3f3f3;
     line-height: 1.5;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 18vw;
+    }
+    
+    .content {
+        width: calc(100vw - 18vw);
+        margin-left: 18vw;
+    }
+    
+    .purchase, .about {
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 20vw;
+        padding: 2rem;
+    }
+    
+    .content {
+        width: calc(100vw - 20vw);
+        margin-left: 20vw;
+        padding-right: 2rem;
+    }
+
+    .purchase, .about {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .game__info {
+        flex-direction: column;
+    }
 }
