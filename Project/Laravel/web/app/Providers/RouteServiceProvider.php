@@ -20,6 +20,8 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/home';
     public const GAME = '/game'; // Añade esto con la ruta correcta
     public const ACCOUNT = '/account'; // Añade esto con la ruta correcta
+    public const CARD = '/card'; // Añade esto con la ruta correcta
+    public const LIBRARY = '/library'; // Añade esto con la ruta correcta
     /**
      * The controller namespace for the application.
      *

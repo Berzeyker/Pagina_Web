@@ -33,6 +33,14 @@ Route::get('/game', function () {
     return view('game');
 })->middleware('auth')->name('game');
 
+Route::get('/card', function () {
+    return view('card');
+})->middleware('auth')->name('card');
+
+Route::get('/library', function () {
+    return view('library');
+})->middleware('auth')->name('library');
+
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
 Route::get('update-role',[RoleController::class, 'update']);

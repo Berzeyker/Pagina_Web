@@ -42,10 +42,19 @@
             <div class="allgames">
                 <h2>All games</h2>
                 <div class="games-container">
-                    @foreach($games as $game) <!--va a crear las cards de acuerdo a los juegos que se encuentren en la base de datos-->
+
+                        @foreach([
+                            ['title' => 'Final Fantasy VII Rebirth', 'price' => 'MXN $1,250.00', 'image' => 'topseller1.jpg', 'desc' => 'The Unkown Journey Continues... After escaping from the dystopian city of Midgar, Cloud and his friends set out on a journey across the planet. New adventures await in a vibrant and vast world in this standalone entry to the FFVII remake trilogy '],
+                            ['title' => 'Cyberpunk 2077', 'price' => 'MXN $1,299.00', 'image' => 'topseller2.jpg', 'desc' => '7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!'],
+                            ['title' => 'Warhammer 40k: Space Marine 2', 'price' => 'MXN $1,299.00', 'image' => 'topseller3.jpg', 'desc' => 'Cyberpunk 2077 is an open-world, action-adventure RPG set in Night City, a megalopolis obsessed with power, glamour, and body modification. Play as V, a cyberpunk mercenary, and take on the most powerful forces of the city in a fight for glory and survival.'],
+                            ['title' => 'Monster Hunter Wilds', 'price' => 'MXN $1,199.00', 'image' => 'topseller1.jpg', 'desc' => 'The unbridled force of nature runs wild and relentless, with environments transforming drastically from one moment to the next. This is a story of monsters and humans and their struggles to live in harmony in a world of duality.'],
+                            ['title' => 'Elden Ring: Nightreign', 'price' => 'MXN $659.00', 'image' => 'topseller1.jpg', 'desc' => 'ELDEN RING NIGHTREIGN is a standalone adventure within the ELDEN RING universe, crafted to offer players a new gaming experience by reimagining the game’s core design.']
+                        ] as $game)
+
+                     <!--va a crear las cards de acuerdo a los juegos que se encuentren en la base de datos-->
                         <div class="game-card">
-                            <img src="{{ asset('img/Games/' . $game->image) }}" alt="{{ $game->title }}"> <!--jala el contenido de los juegos desde la base de datos-->
-                            <div class="game-title">{{ $game->title }}</div>
+                            <img src="#"> <!--jala el contenido de los juegos desde la base de datos-->
+                            <div class="game-title">titulo tomado de la db</div>
                             <div class="game-detail">Details</div>
                         </div>
                     @endforeach
