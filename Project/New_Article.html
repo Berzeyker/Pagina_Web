@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/new_article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/Logos/Epicgames.png" alt="Store Logo" class="logo-image">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+            <li><a href="#">ABOUT US</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="button-container">
+            <button class="button button1" onclick="register()">NEW ACCOUNT</button>
+            <button class="button button2" onclick="login()">LOG IN</button>
+        </div>
+    </nav>
+
+    <!-- Article Section -->
+    <section class="article-section">
+        <div class="article-container">
+            <h1 class="article-title">Article</h1>
+            <div class="header-image">
+                <img src="img/Games/r6.jpeg" alt="Videojuegos destacados">
+            </div>
+            <p class="article-intro">The three games announced have not attracted too much attention. There are those who say that it is a somewhat weaker month than usual. Be that as it may, the games announced are:</p>
+            
+            <div class="game-card">
+                <div class="game-content">
+                    <h3 class="game-title">Robocop: Rogue City para PS4</h3>
+                    <p class="game-description">While it's true that it's not one of the most outstanding games of recent years, it has its own one, especially if you liked the Robocop movies. You can make choices that can alter the fate of both your mission and the citizens you're sworn to protect.</p>
+                </div>
+                <div class="game-image">
+                    <img src="img/Games/Cyberpunk.jpg" alt="Robocop: Rogue City">
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-content">
+                    <h3 class="game-title">The Texas Chain Saw Massacre para PS4 y PS5</h3>
+                    <p class="game-description">A special month for lovers of film classics, and between the game of The Texas Chainsaw Massacre and Robocop, there is nostalgia to give and shots. In this case, through a third-person asymmetrical survival game in the purest Dead by Daylight style.</p>
+                </div>
+                <div class="game-image">
+                    <img src="img/Games/GreedFall.jpg" alt="The Texas Chain Saw Massacre">
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-content">
+                    <h3 class="game-title">Digimon Story Cyber Sleuth para PS4</h3>
+                    <p class="game-description">Possibly, the best of the three games announced. Although it has been around for a long time, it is a very interesting title, especially for those who like the digimon saga. It is an RPG with a somewhat darker touch than usual where the digital world and the real world are intermingled in an adventure where parenting and combat are of paramount importance.</p>
+                </div>
+                <div class="game-image">
+                    <img src="img/Games/remnant2.jpg" alt="Digimon Story Cyber Sleuth">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar with game promotions -->
+        <aside class="game-promo-sidebar">
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="img/Games/Resident2.jpg" alt="Resident Evil 2">
+                </div>
+                <div class="promo-content">
+                    <h3 class="promo-title">Resident Evil 2</h3>
+                    <p class="promo-subtitle">New Game?</p>
+                </div>
+            </div>
+            
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="img/Games/remnant2.jpg" alt="God of War">
+                </div>
+                <div class="promo-content">
+                    <h3 class="promo-title">GODOFWAR</h3>
+                    <p class="promo-subtitle">New Gody</p>
+                </div>
+            </div>
+            
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="img/Games/Cyberpunk.jpg" alt="Dark Souls III">
+                </div>
+                <div class="promo-content">
+                    <h3 class="promo-title">DARK SOULS III</h3>
+                    <p class="promo-subtitle">Dark souls 3</p>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="img/Games/GreedFall.jpg" alt="Dark Souls III">
+                </div>
+                <div class="promo-content">
+                    <h3 class="promo-title">DARK SOULS III</h3>
+                    <p class="promo-subtitle">Dark souls 3</p>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="img/Games/r6.jpeg" alt="Dark Souls III">
+                </div>
+                <div class="promo-content">
+                    <h3 class="promo-title">DARK SOULS III</h3>
+                    <p class="promo-subtitle">Dark souls 3</p>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="img/Games/7days.avif" alt="Dark Souls III">
+                </div>
+                <div class="promo-content">
+                    <h3 class="promo-title">7 Days to die</h3>
+                    <p class="promo-subtitle">New Update?</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases-section">
+        <div class="use-cases-container">
+            <div class="use-cases-grid">
+                <!-- Column 1 -->
+                <div class="use-cases-column">
+                    <h3>Use cases</h3>
+                    <a href="#" class="use-cases-item">UI design</a>
+                    <a href="#" class="use-cases-item">UX design</a>
+                    <a href="#" class="use-cases-item">Wireframing</a>
+                    <a href="#" class="use-cases-item">Diagramming</a>
+                    <a href="#" class="use-cases-item">Brainstorming</a>
+                    <a href="#" class="use-cases-item">Online whiteboard</a>
+                    <a href="#" class="use-cases-item">Team collaboration</a>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="use-cases-column">
+                    <h3>Explore</h3>
+                    <a href="#" class="use-cases-item">Design</a>
+                    <a href="#" class="use-cases-item">Prototyping</a>
+                    <a href="#" class="use-cases-item">Development features</a>
+                    <a href="#" class="use-cases-item">Design systems</a>
+                    <a href="#" class="use-cases-item">Collaboration features</a>
+                    <a href="#" class="use-cases-item">Design process</a>
+                    <a href="#" class="use-cases-item">FigJam</a>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="use-cases-column">
+                    <h3>Resources</h3>
+                    <a href="#" class="use-cases-item">Blog</a>
+                    <a href="#" class="use-cases-item">Best practices</a>
+                    <a href="#" class="use-cases-item">Colors</a>
+                    <a href="#" class="use-cases-item">Color wheel</a>
+                    <a href="#" class="use-cases-item">Support</a>
+                    <a href="#" class="use-cases-item">Developers</a>
+                    <a href="#" class="use-cases-item">Resource library</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
+        function register() {
+            window.location.href = "register.html";
+        }
+        function login() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
