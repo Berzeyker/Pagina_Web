@@ -3,6 +3,7 @@
 @section('title', 'My Account')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/account.css') }}">
 
 <div class="container">
     <!-- Sidebar izquierdo -->
