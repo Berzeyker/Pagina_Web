@@ -11,6 +11,7 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
+    protected $redirectTo = RouteServiceProvider::GAME;
     public function showLoginForm()
     {
         return view('auth.login'); // Your login view
@@ -25,7 +26,7 @@ class LoginController extends Controller
 
         if (Auth::attempt(['email' => $credentials['email'], 'password' => $credentials['password']])) {
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+            return redirect()->intended('/game');
         }
 
         return back()->withErrors([
@@ -38,6 +39,6 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/home');
     }
 }
