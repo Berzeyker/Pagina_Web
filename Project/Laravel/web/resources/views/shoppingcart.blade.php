@@ -18,7 +18,7 @@
         </div>
         <div class="sidebar__container">
             <a href="#">Store Page</a>
-            <a href="#">Library</a>
+            <a onclick="window.location.href='{{ route('library') }}'">Library</a>
             <a href="#">Community</a>
             <a href="#">News</a>
         </div>
