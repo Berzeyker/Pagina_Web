@@ -153,23 +153,13 @@ body {
     appearance: none;
 }
 
-.navbar__icons {
-    width: 18.75rem;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 3.125rem;
+.search__input::placeholder,
+.search__icon {
+    color: rgba(219, 219, 219, 0.5);
 }
 
-.navbar__btn {
-    width: 3rem;
-    height: 3rem;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.shoppingcart {
+    width: max-content;
 }
 
 .allgames {

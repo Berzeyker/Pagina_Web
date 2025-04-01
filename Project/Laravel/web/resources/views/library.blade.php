@@ -25,17 +25,8 @@
     <div class="main-content">
         <div class="content">
             <div class="navbar">
-            <div class="searchbar">
-                    <img src="{{ asset('svg/search.svg') }}" alt="">
+                <div class="searchbar">
                     <input class="search__input" type="search" placeholder="Search">
-                </div>
-                <div class="navbar__icons">
-                    <div class="shoppingcart__icon">
-                        <button class="navbar__btn"><img src="{{ asset('svg/shoppingcart.svg') }}" alt=""></button>
-                    </div>
-                    <div class="account__icon">
-                        <button class="navbar__btn"></button><img src="{{ asset('svg/account.svg') }}" alt=""></button>
-                    </div>
                 </div>
             </div>
             
