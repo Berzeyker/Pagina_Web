@@ -48,14 +48,11 @@
                 <div class="game__info">
                     <div class="carousel">
                         <div class="front__image">
-                            <img class="main__image" id="mainImage" src="./img/hero__image.webp" alt="Main Image">
+                            <img class="main__image" id="mainImage" src="./img/hero__image.webp" alt="Main Image"> <!-- en el src jalara el url de la imagen de la base de datos-->
                             <div class="front__thumbnail">
                                 <!--jala las imagenes del juego desde la base de datos y las coloca como thumbnail-->
-                                <img class="thumbnail" src="" alt="">
-                                <img class="thumbnail" src="" alt="">
-                                <img class="thumbnail" src="" alt="">
-                                <img class="thumbnail" src="" alt="">
-                                <img class="thumbnail" src="" alt="">
+                                <!--@foreach ($games as $game)-->
+                                <img class="thumbnail" src="" alt=""> <!-- en el src jalara el url de alguna de las imagenes de la base de datos-->
                             </div>
                         </div>
                     </div>
@@ -85,7 +82,7 @@
             <div class="review__container">
                 <h2>Reviews</h2>
                 <div class="reviews">
-                    
+
                 </div>
             </div>
 
