@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['withoutNavbar' => true])
 
 @section('title', 'My Account')
 
