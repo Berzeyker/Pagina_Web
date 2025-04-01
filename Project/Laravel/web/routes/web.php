@@ -22,6 +22,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');  // this will load login.blade.php
 });
+Route::get('/account', function () {
+    return view('account');
+})->name('account');
 
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
@@ -46,6 +49,9 @@ Route::middleware('auth')->group(function () {
         return view('dashboard'); // Your dashboard view
     })->name('dashboard');
     // Add more protected routes here...
+    Route::get('/account', function () {
+        return view('account');
+    })->name('account');
 });
 // END PROTECTED ROUTES
 

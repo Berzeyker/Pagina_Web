@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/Logos/Epicgames.png" alt="Store Logo" class="logo-image">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+            <li><a href="#">ABOUT US</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="button-container">
+            <button class="button button1" onclick="register()">NEW ACCOUNT</button>
+            <button class="button button2" onclick="login()">LOG IN</button>
+        </div>
+    </nav>
+
+    <!-- News & Notices Section -->
+    <section class="news-section">
+        <div class="news-container">
+            <h2 class="section-title">News & Notices</h2>
+            
+            <div class="news-grid">
+                <!-- Artículo destacado (doble ancho) -->
+                <div class="news-card featured">
+                    <div class="news-image">
+                        <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk 2077">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Cyberpunk 2077</h3>
+                        <p class="news-content">New major update brings significant improvements and new content.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+                
+                <!-- Artículos normales -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="img/Games/7days.avif" alt="7 Days to Die">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">7 Days to Die</h3>
+                        <p class="news-content">New update brings improved zombie AI and building mechanics.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="img/Games/GreedFall.jpg" alt="GreedFall">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">GreedFall</h3>
+                        <p class="news-content">New DLC announced with additional story content.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="img/Games/r6.jpeg" alt="Rainbow Six Siege">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Rainbow Six Siege</h3>
+                        <p class="news-content">New season introduces two operators and a reworked map.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="img/Games/remnant2.jpg" alt="Remnant 2">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Remnant 2</h3>
+                        <p class="news-content">Expansion announced with new story campaign and weapons.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+                
+                <div class="news-card featured">
+                    <div class="news-image">
+                        <img src="img/Games/Resident2.jpg" alt="Resident Evil 2">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Resident Evil 2</h3>
+                        <p class="news-content">Special anniversary edition coming soon with new content.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="img/Games/Resident2.jpg" alt="Resident Evil 2">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Resident Evil 2</h3>
+                        <p class="news-content">Special anniversary edition coming soon with new content.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+
+                <div class="news-card featured">
+                    <div class="news-image">
+                        <img src="img/Games/Resident2.jpg" alt="Resident Evil 2">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Resident Evil 2</h3>
+                        <p class="news-content">Special anniversary edition coming soon with new content.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="img/Games/Resident2.jpg" alt="Resident Evil 2">
+                    </div>
+                    <div class="news-content-wrapper">
+                        <h3 class="news-title">Resident Evil 2</h3>
+                        <p class="news-content">Special anniversary edition coming soon with new content.</p>
+                        <a href="#" class="news-link">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases-section">
+        <div class="use-cases-container">
+            <h2>Game Resources</h2>
+            <div class="use-cases-grid">
+                <!-- Column 1 -->
+                <div class="use-cases-column">
+                    <h3>Use cases</h3>
+                    <a href="#" class="use-cases-item">UI design</a>
+                    <a href="#" class="use-cases-item">UX design</a>
+                    <a href="#" class="use-cases-item">Wireframing</a>
+                    <a href="#" class="use-cases-item">Diagramming</a>
+                    <a href="#" class="use-cases-item">Brainstorming</a>
+                    <a href="#" class="use-cases-item">Online whiteboard</a>
+                    <a href="#" class="use-cases-item">Team collaboration</a>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="use-cases-column">
+                    <h3>Explore</h3>
+                    <a href="#" class="use-cases-item">Design</a>
+                    <a href="#" class="use-cases-item">Prototyping</a>
+                    <a href="#" class="use-cases-item">Development features</a>
+                    <a href="#" class="use-cases-item">Design systems</a>
+                    <a href="#" class="use-cases-item">Collaboration features</a>
+                    <a href="#" class="use-cases-item">Design process</a>
+                    <a href="#" class="use-cases-item">FigJam</a>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="use-cases-column">
+                    <h3>Resources</h3>
+                    <a href="#" class="use-cases-item">Blog</a>
+                    <a href="#" class="use-cases-item">Best practices</a>
+                    <a href="#" class="use-cases-item">Colors</a>
+                    <a href="#" class="use-cases-item">Color wheel</a>
+                    <a href="#" class="use-cases-item">Support</a>
+                    <a href="#" class="use-cases-item">Developers</a>
+                    <a href="#" class="use-cases-item">Resource library</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
+        function register() {
+            window.location.href = "register.html";
+        }
+        function login() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
