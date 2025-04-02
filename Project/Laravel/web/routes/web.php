@@ -52,9 +52,14 @@ Route::get('/shoppingcart', function () {
 Route::get('/aboutus', function () {
     return view('aboutus');
 })->name('aboutus');
+
 Route::get('/article', function () {
     return view('article');
 })->name('article');
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
+})->middleware('auth')->name('wishlist');
 
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
