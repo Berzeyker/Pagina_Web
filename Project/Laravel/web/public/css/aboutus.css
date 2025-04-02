@@ -2,9 +2,9 @@
 /* ESTILOS GENERALES */
 /* ==================== */
 :root {
-    --primary-color: #4CAF50; /* Verde original */
+    --primary-color: #4CAF50; 
     --primary-hover: #45a049;
-    --secondary-color: #03c109; /* Verde brillante que querías usar */
+    --secondary-color: #03c109;
     --dark-bg: #1e1e1e;
     --medium-bg: #252525;
     --light-bg: #2a2a2a;
@@ -522,4 +522,4 @@ body {
     .use-cases-column:last-child {
         margin-bottom: 0;
     }
-}
+} 

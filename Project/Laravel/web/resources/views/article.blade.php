@@ -3,8 +3,8 @@
 @section('title', 'News Article')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/new_article.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="{{ asset('css/new_article.css') }}">
 
     <!-- Article Section -->
     <section class="article-section">
