@@ -28,6 +28,10 @@
                 <div class="searchbar">
                     <input class="search__input" type="search" placeholder="Search">
                 </div>
+                <div class="navbar-icons">
+                    <button class="navbar-btn"></button>
+                    <button class="navbar-btn"></button>
+                </div>
             </div>
             
             <div class="allgames">

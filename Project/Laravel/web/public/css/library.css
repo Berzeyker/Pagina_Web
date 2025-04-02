@@ -158,8 +158,23 @@ body {
     color: rgba(219, 219, 219, 0.5);
 }
 
-.shoppingcart {
-    width: max-content;
+.navbar-icons {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navbar-btn {
+    background-color: #303030;
+    border: none;
+    padding: 5px;
+    border-radius: 100%;
+    transition: background-color 0.3 ease;
+}
+
+.navbar-btn:hover {
+    background-color: #3b3b3b;
 }
 
 .allgames {

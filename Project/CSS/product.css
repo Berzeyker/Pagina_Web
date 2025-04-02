@@ -90,6 +90,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .searchbar {
@@ -124,13 +125,27 @@
     appearance: none;
 }
 
-.search__input::placeholder,
-.search__icon {
-    color: rgba(219, 219, 219, 0.5);
+.navbar__icons {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
 }
 
-.shoppingcart {
-    width: max-content;
+.shoppingcart__icon {
+    width: 50px;
+    height: 100%;
+    border-radius: 50px;
+    background: #303030;
+}
+
+.account__icon {
+    width: 50px;
+    height: 100%;
+    border-radius: 50px;
+    background: #303030;
 }
 
 .specialoffers {
@@ -208,11 +223,20 @@
     padding: 20px;
     border-radius: 10px;
     color:#f3f3f3;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .featured__info h2 {
     font-family: Inter, sans-serif;
     font-size: 24px;
+    color: #f3f3f3;
+}
+
+.featured__info p {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
     color: #f3f3f3;
 }
 
@@ -224,6 +248,20 @@
 }
 
 .foryou h2 {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    color: #f3f3f3;
+}
+
+.categories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.categories h2 {
     font-size: 24px;
     font-family: Inter, sans-serif;
     font-weight: 300;
