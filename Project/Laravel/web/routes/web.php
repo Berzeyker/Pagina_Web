@@ -49,6 +49,13 @@ Route::get('/shoppingcart', function () {
     return view('shoppingcart');
 })->middleware('auth')->name('shoppingcart');
 
+Route::get('/aboutus', function () {
+    return view('aboutus');
+})->name('aboutus');
+Route::get('/article', function () {
+    return view('article');
+})->name('article');
+
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
 Route::get('update-role',[RoleController::class, 'update']);
@@ -74,6 +81,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/account', function () {
         return view('account');
     })->name('account');
+
 });
 // END PROTECTED ROUTES
 

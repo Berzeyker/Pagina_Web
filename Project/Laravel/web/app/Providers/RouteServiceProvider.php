@@ -24,6 +24,8 @@ class RouteServiceProvider extends ServiceProvider
     public const LIBRARY = '/library'; // Añade esto con la ruta correcta
     public const SHOPPINGCART = '/shoppingcart';
     public const PAYMENT = '/payment';
+    public const ABOUTUS = '/aboutus'; // Añade esto con la ruta correct
+    public const ARTICLE = '/article';
     /**
      * The controller namespace for the application.
      *
