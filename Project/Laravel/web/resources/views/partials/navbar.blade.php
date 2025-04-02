@@ -9,7 +9,14 @@
     </ul>
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     <div class="button-container">
-    <button class="button button1" onclick="window.location.href='{{ route('register') }}'">NEW ACCOUNT</button>
-    <button class="button button2" onclick="window.location.href='{{ route('login') }}'">LOG IN</button>
+        @if(auth()->check())
+            <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                @csrf
+                <button type="submit" class="button button1">LOG OUT</button>
+            </form>
+        @else
+            <button class="button button1" onclick="window.location.href='{{ route('register') }}'">NEW ACCOUNT</button>
+            <button class="button button2" onclick="window.location.href='{{ route('login') }}'">LOG IN</button>
+        @endif
     </div>
 </nav>

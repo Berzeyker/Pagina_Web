@@ -61,6 +61,11 @@ Route::get('/wishlist', function () {
     return view('wishlist');
 })->middleware('auth')->name('wishlist');
 
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect()->route('home');
+})->name('logout');
+
 Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
 Route::get('update-role',[RoleController::class, 'update']);
