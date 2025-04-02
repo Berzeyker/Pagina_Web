@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 <nav class="navbar">
     <div class="logo" onclick="window.location.href='{{ route('home') }}'">MyLogo</div>
     <ul class="nav-links">
