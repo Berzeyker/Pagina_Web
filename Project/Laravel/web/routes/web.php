@@ -13,17 +13,17 @@ use App\Http\Controllers\RoleController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('/home'); // Change 'home' to match your new Blade file
 })->name('home');
 
 Route::get('/login', function () {
-    return view('game');  // this will load login.blade.php
-});
+    return view('login');  // this will load login.blade.php
+})->name('login');
 
 Route::get('/register', function () {
-    return view('game');  // this will load login.blade.php
-});
+    return view('register');  // this will load login.blade.php
+})->name('register');
 
 Route::get('/account', function () {
     return view('account');
