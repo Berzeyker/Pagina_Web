@@ -175,6 +175,18 @@
         gap: 80px;
     }
 
+    .featured__container {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    /* When visible */
+    .featured__container.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .featured1 {
         background: radial-gradient(circle at 50% -30%, #171D45, #1e1e1e 70%);
     }

@@ -121,6 +121,20 @@
 
 @section('scripts')
     <script>
+                const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, {
+            threshold: 0.3, // Adjust as needed
+        });
+
+        const animatedElements = document.querySelectorAll('.featured__container');
+        animatedElements.forEach(el => observer.observe(el));
         function register() {
             window.location.href="{{ url('/register') }}";
         }

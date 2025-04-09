@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <header>
 </header>
+
 <body>
     <nav class="navbar">
         <div class="logo">MyLogo</div>
@@ -31,15 +35,15 @@
             document.querySelector(".nav-links").classList.toggle("show");
         }
     </script>
- 
+
     <div class="hero">
         <div class="parallax">
-        <div class="overlay"></div>
-        <div class="hero__container">
-            <h2 class="title__hero">Explore millions of videogames</h2>
-            <h3 class="subtitle__hero">Discover, shop and play. Your gaming journey starts here.</h3>
-            <button class="button__hero">SHOP NOW</button>
-        </div>
+            <div class="overlay"></div>
+            <div class="hero__container">
+                <h2 class="title__hero">Explore millions of videogames</h2>
+                <h3 class="subtitle__hero">Discover, shop and play. Your gaming journey starts here.</h3>
+                <button class="button__hero">SHOP NOW</button>
+            </div>
         </div>
     </div>
 
@@ -80,10 +84,10 @@
             <h4 class="title__topseller">Final Fantasy VII Rebirth</h4>
             <h5 class="price__topseller">MXN $1,250.00</h5>
             <p class="text__topseller">
-                The Unkown Journey Continues... After escaping from the 
-                dystopian city of Midgar, Cloud and his friends set out on a 
+                The Unkown Journey Continues... After escaping from the
+                dystopian city of Midgar, Cloud and his friends set out on a
                 journey across the planet. New adventures await in a vibrant and
-                vast world in this standalone entry to the FFVII remake trilogy 
+                vast world in this standalone entry to the FFVII remake trilogy
             </p>
             <button class="button__topseller">Store Page</button>
         </div>
@@ -95,7 +99,9 @@
             <h4 class="title__topseller">Cyberpunk 2077</h4>
             <h5 class="price__topseller">MXN $1,299.00</h5>
             <p class="text__topseller">
-                7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!
+                7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival
+                horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came
+                first. Navezgane awaits!
             </p>
             <button class="button__topseller">Store Page</button>
         </div>
@@ -107,7 +113,9 @@
             <h4 class="title__topseller">Warhammer 40k: Space Marine 2</h4>
             <h5 class="price__topseller">MXN $1,29`9.00</h5>
             <p class="text__topseller">
-                Cyberpunk 2077 is an open-world, action-adventure RPG set in Night City, a megalopolis obsessed with power, glamour, and body modification. Play as V, a cyberpunk mercenary, and take on the most powerful forces of the city in a fight for glory and survival.            </p>
+                Cyberpunk 2077 is an open-world, action-adventure RPG set in Night City, a megalopolis obsessed with
+                power, glamour, and body modification. Play as V, a cyberpunk mercenary, and take on the most powerful
+                forces of the city in a fight for glory and survival. </p>
             <button class="button__topseller">Store Page</button>
         </div>
     </div>
@@ -118,7 +126,9 @@
             <h4 class="title__topseller">Monster Hunter Wilds</h4>
             <h5 class="price__topseller">MXN $1,199.00</h5>
             <p class="text__topseller">
-                The unbridled force of nature runs wild and relentless, with environments transforming drastically from one moment to the next. This is a story of monsters and humans and their struggles to live in harmony in a world of duality.
+                The unbridled force of nature runs wild and relentless, with environments transforming drastically from
+                one moment to the next. This is a story of monsters and humans and their struggles to live in harmony in
+                a world of duality.
             </p>
             <button class="button__topseller">Store Page</button>
         </div>
@@ -130,7 +140,8 @@
             <h4 class="title__topseller">Elden Ring: Nightreign</h4>
             <h5 class="price__topseller">MXN $659.00</h5>
             <p class="text__topseller">
-                ELDEN RING NIGHTREIGN is a standalone adventure within the ELDEN RING universe, crafted to offer players a new gaming experience by reimagining the game’s core design.            </p>
+                ELDEN RING NIGHTREIGN is a standalone adventure within the ELDEN RING universe, crafted to offer players
+                a new gaming experience by reimagining the game’s core design. </p>
             <button class="button__topseller">Store Page</button>
         </div>
     </div>
@@ -158,11 +169,25 @@
     </div>
     <script>
         function register() {
-            window.location.href="Register.html";
+            window.location.href = "Register.html";
         }
         function login() {
-            window.location.href="Login.html";
+            window.location.href = "Login.html";
         }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, {
+            threshold: 0.3, // Adjust as needed
+        });
+
+        const animatedElements = document.querySelectorAll('.featured__container');
+        animatedElements.forEach(el => observer.observe(el));
     </script>
 </body>
 <footer>
@@ -191,7 +216,8 @@
                 <h5 class="subtitle__footer">example@example.com</h5>
                 <h5 class="subtitle__footer">Durango, Durango</h5>
             </div>
-        </div>    
+        </div>
     </div>
 </footer>
+
 </html>
