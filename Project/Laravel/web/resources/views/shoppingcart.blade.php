@@ -34,6 +34,27 @@
                     <input class="search__input" type="search" placeholder="Search">
                 </div>
                 <div class="account"></div>
+
+                <div class="dropdown-buttons">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
+                            </button>
+                            <div class="dropdown-menu" id="dropdown1">
+                                <a href="#">Profile</a>
+                                <a href="#">Settings</a>
+                                <a href="#">Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
+                            </button>
+                            <div class="dropdown-menu" id="dropdown2">
+                                <a href="#">View Cart</a>
+                                <a href="#">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
             </div>
             
             <div class="cart-page-container">
@@ -149,6 +170,25 @@
 </div>
 
 <script>
+    function toggleDropdown(id) {
+                const menu = document.getElementById(id);
+                const allMenus = document.querySelectorAll('.dropdown-menu');
+
+                allMenus.forEach(m => {
+                    if (m !== menu) m.style.display = 'none';
+                });
+
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            }
+
+            document.addEventListener('click', function (event) {
+                const isDropdown = event.target.closest('.dropdown');
+                if (!isDropdown) {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.style.display = 'none';
+                    });
+                }
+            });
     document.addEventListener('DOMContentLoaded', function() {
         console.log("El JavaScript se está ejecutando!"); // Para prueba
         
