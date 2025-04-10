@@ -9,12 +9,12 @@
         <!-- Barra lateral izquierda -->
         <div class="left-sidebar">
             <div class="avatar-left">
-                <img src="img/Blackwork1.png" alt="Avatar">
+                <img src="{{ asset('images/logos/raven.png') }}" alt="Avatar">
             </div>
             
             <div class="menu-left">
                 <a href="#">Store Page</a>
-                <a href="#">Library</a>
+                <a onclick="window.location.href='{{ route('library') }}'">Library</a>
                 <a href="#">Community</a>
                 <a href="#">News</a>
             </div>

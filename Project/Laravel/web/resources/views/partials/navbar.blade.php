@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 <nav class="navbar">
-    <div class="logo" onclick="window.location.href='{{ route('home') }}'">MyLogo</div>
+    <div class="logo" onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt=""></div>
     <ul class="nav-links">
         <li><a href="#">SHOP</a></li>
         <li><a href="#">NEWS</a></li>

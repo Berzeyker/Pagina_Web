@@ -9,7 +9,7 @@
     <!-- Sidebar izquierdo -->
     <div class="sidebar">
         <div class="avatar-container-left">
-            <div class="avatar-left"></div>
+            <div class="avatar-left"><img src="{{ asset('images/logos/raven.png') }}" alt="Avatar"></div>
         </div>
         <div class="menu">
             <a href="#">Store Page</a>

@@ -13,7 +13,7 @@
     <div class="sidebar">
         <div class="avatar-container-left">
             <div class="avatar-left">
-                <img src="{{ asset('img/Blackwork1.png') }}" alt="Avatar">
+                <img src="{{ asset('images/logos/raven.png') }}" alt="Avatar">
             </div>
         </div>
         <div class="sidebar__container">
@@ -33,7 +33,6 @@
                     <span class="search__icon material-symbols-outlined">search</span>
                     <input class="search__input" type="search" placeholder="Search">
                 </div>
-                <div class="account"></div>
 
                 <div class="dropdown-buttons">
                         <div class="dropdown">

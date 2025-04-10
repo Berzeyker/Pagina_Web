@@ -10,12 +10,12 @@
     <div class="sidebar">
         <div class="avatar-container-left">
             <div class="avatar-left">
-                <img src="{{ asset('img/Cyberpunk.jpg') }}" alt="Avatar">
+                <img src="{{ asset('images/logos/raven.png') }}" alt="Avatar">
             </div>
         </div>
         <div class="menu">
             <a href="#">Store Page</a>
-            <a href="#">Library</a>
+            <a onclick="window.location.href='{{ route('library') }}'">Library</a>
             <a href="#">Community</a>
             <a href="#">News</a>
         </div>

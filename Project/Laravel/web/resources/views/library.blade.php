@@ -10,12 +10,12 @@
     <div class="sidebar">
         <div class="avatar-container-left">
             <div class="avatar-left">
-                <img src="{{ asset('') }}" alt="Avatar"> <!--logo principal de la pagina-->
+                <img src="{{ asset('images/logos/raven.png') }}" alt="Avatar"> <!--logo principal de la pagina-->
             </div>
         </div>
         <div class="sidebar__container">
             <a href="#">Store Page</a>
-            <a href="#">Library</a>
+            <a onclick="window.location.href='{{ route('library') }}'">Library</a>
             <a href="#">Community</a>
             <a href="#">News</a>
         </div>
@@ -28,9 +28,25 @@
                 <div class="searchbar">
                     <input class="search__input" type="search" placeholder="Search">
                 </div>
-                <div class="navbar-icons">
-                    <button class="navbar-btn"></button>
-                    <button class="navbar-btn"></button>
+                <div class="dropdown-buttons">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
+                        </button>
+                        <div class="dropdown-menu" id="dropdown1">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
+                        </button>
+                        <div class="dropdown-menu" id="dropdown2">
+                            <a href="#">View Cart</a>
+                            <a href="#">Checkout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
