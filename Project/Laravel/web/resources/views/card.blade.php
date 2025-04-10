@@ -46,19 +46,19 @@
                         <div class="form-col">
                             <div class="form-group">
                                 <label>Card Number</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                         <div class="form-col">
                             <div class="form-group">
                                 <label>Expiration Date</label>
-                                <input type="text" class="form-input" placeholder="MM/YY">
+                                <input type="text" class="form-input" placeholder="MM/YY" required>
                             </div>
                         </div>
                         <div class="form-col">
                             <div class="form-group">
                                 <label>Security Code</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                     </div>
@@ -70,19 +70,19 @@
                         <div class="form-col">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                         <div class="form-col">
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                         <div class="form-col">
                             <div class="form-group">
                                 <label>City</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                     </div>
@@ -91,13 +91,13 @@
                         <div class="form-col form-col-wide">
                             <div class="form-group">
                                 <label>Billing Address</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                         <div class="form-col form-col-narrow">
                             <div class="form-group">
                                 <label>Zip or Postal Code</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                     </div>
@@ -111,13 +111,13 @@
                         <div class="form-col">
                             <div class="form-group">
                                 <label>Country</label>
-                                <input type="text" class="form-input" placeholder="Example">
+                                <input type="text" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                         <div class="form-col">
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="tel" class="form-input" placeholder="Example">
+                                <input type="tel" class="form-input" placeholder="Example" required>
                             </div>
                         </div>
                     </div>
@@ -129,8 +129,15 @@
                     </div>
                     
                     <!-- Botón de envío -->
-                    <button type="submit" class="add-payment-btn">Purchase</button>
+                    <button type="button" class="add-payment-btn" onclick="handlePurchase()">Purchase</button>
                 </form>
+            </div>
+            <div class="success-popup" id="successPopup">
+                <div class="popup-content">
+                    <h3>🎉 Purchase Successful</h3>
+                    <p>Your transaction has been completed successfully.</p>
+                    <button onclick="closePopup()">OK</button>
+                </div>
             </div>
         </div>
 
@@ -144,4 +151,42 @@
             </ul>
         </div>
     </div>
+
+<script>
+    function handlePurchase() {
+        const form = document.querySelector('.payment-form');
+        const requiredFields = form.querySelectorAll('[required]');
+        let allFilled = true;
+
+        // Check all required fields
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                allFilled = false;
+                field.classList.add('error');
+            } else {
+                field.classList.remove('error');
+            }
+        });
+
+        if (allFilled) {
+            showPopup();
+            form.reset();
+        } else {
+            alert('Please fill in all required fields!');
+            // Scroll to first empty field
+            const firstEmpty = form.querySelector('.error');
+            if (firstEmpty) {
+                firstEmpty.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    }
+
+    function showPopup() {
+        document.getElementById('successPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('successPopup').style.display = 'none';
+    }
+</script>
 @endsection
