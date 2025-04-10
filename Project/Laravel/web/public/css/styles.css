@@ -174,7 +174,7 @@
         align-items: center;
         gap: 80px;
     }
-    
+
     .featured__container {
         opacity: 0;
         transform: translateY(40px);
@@ -293,6 +293,29 @@
         padding: 12px;
         max-width: 140px;
         margin-top: 10px;
+    }
+
+    .topseller__container,
+    .image_topseller {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-out;
+    }
+
+    .image_topseller {
+        transform: translateX(-100px);
+        /* From left */
+    }
+
+    /* When animated class is added */
+    .topseller.animate .image_topseller {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .topseller.animate .topseller__container {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .news{

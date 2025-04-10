@@ -121,19 +121,19 @@
 
 @section('scripts')
     <script>
-                const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                } else {
-                    entry.target.classList.remove('animate');
-                }
-            });
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        } else {
+            entry.target.classList.remove('animate');
+        }
+        });
         }, {
-            threshold: 0.3, // Adjust as needed
+            threshold: 0.3,
         });
 
-        const animatedElements = document.querySelectorAll('.featured__container');
+        const animatedElements = document.querySelectorAll('.featured__container, .topseller');
         animatedElements.forEach(el => observer.observe(el));
         function register() {
             window.location.href="{{ url('/register') }}";

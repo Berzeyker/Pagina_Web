@@ -86,9 +86,11 @@
             left: 0;
             text-align: center;
         }
+
         .nav-links.show {
             display: flex;
         }
+
         .hamburger {
             display: block;
         }
@@ -180,7 +182,7 @@
         transform: translateY(40px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-    
+
     /* When visible */
     .featured__container.animate {
         opacity: 1;
@@ -209,7 +211,7 @@
         font-size: 34px;
         font-family: Inter, sans-serif;
         color: #f3f3f3;
-        font-weight: 300;   
+        font-weight: 300;
     }
 
     .collage {
@@ -231,7 +233,7 @@
 
     .title__collage {
         font-size: 72px;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         color: #f3f3f3;
     }
 
@@ -269,7 +271,7 @@
 
     .price__topseller {
         font-size: 22px;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         color: #f3f3f3;
         font-weight: 200;
     }
@@ -293,7 +295,30 @@
         margin-top: 10px;
     }
 
-    .news{
+    .topseller__container,
+    .image_topseller {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s ease-out;
+    }
+
+    .image_topseller {
+        transform: translateX(-100px);
+        /* From left */
+    }
+
+    /* When animated class is added */
+    .topseller.animate .image_topseller {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .topseller.animate .topseller__container {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .news {
         width: 100%;
         height: 968px;
         background: radial-gradient(ellipse 90% 70% at 50% 60%, #171D45, #1e1e1e 60%);
@@ -348,7 +373,7 @@
     .title__reviews {
         font-size: 72px;
         font-family: Inter, sans-serif;
-        color:#f3f3f3 ;
+        color: #f3f3f3;
     }
 
     .subtitle__reviews {
@@ -484,8 +509,10 @@
     }
 
     .form__group input:focus {
-        border-color: #9c9797; /* Cambia el color del borde cuando el campo esté enfocado */
-        background-color: rgb(61, 61, 61); /* Cambia el fondo al enfocar */
+        border-color: #9c9797;
+        /* Cambia el color del borde cuando el campo esté enfocado */
+        background-color: rgb(61, 61, 61);
+        /* Cambia el fondo al enfocar */
     }
 
 
@@ -514,16 +541,17 @@
         cursor: pointer;
         margin: 10%;
         margin-bottom: 10%;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-size: 1rem;
         transition: background-color 0.3s ease;
     }
+
     .btn:hover {
-        background-color: rgb(75, 75, 75); 
+        background-color: rgb(75, 75, 75);
     }
 
     .btn:focus {
-        outline: none; 
+        outline: none;
     }
 
     .continue__with {
@@ -538,7 +566,7 @@
         text-align: center;
     }
 
-    .social__login  {
+    .social__login {
         color: white;
         margin: 20px 0;
         font-size: 0.9rem;
@@ -556,8 +584,10 @@
         height: 40px;
         border-radius: 60%;
         border: none;
-        background-color: rgb(51, 51, 51); /* Fondo más suave */
-        color: white; /* Color del ícono */
+        background-color: rgb(51, 51, 51);
+        /* Fondo más suave */
+        color: white;
+        /* Color del ícono */
         cursor: pointer;
         transition: background-color 0.3s ease;
     }

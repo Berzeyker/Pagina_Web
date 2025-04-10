@@ -174,20 +174,22 @@
         function login() {
             window.location.href = "Login.html";
         }
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                } else {
-                    entry.target.classList.remove('animate');
-                }
-            });
-        }, {
-            threshold: 0.3, // Adjust as needed
-        });
 
-        const animatedElements = document.querySelectorAll('.featured__container');
-        animatedElements.forEach(el => observer.observe(el));
+        const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        } else {
+            entry.target.classList.remove('animate');
+        }
+    });
+}, {
+    threshold: 0.3,
+});
+
+// Observe both .featured__container and .topseller elements
+const animatedElements = document.querySelectorAll('.featured__container, .topseller');
+animatedElements.forEach(el => observer.observe(el));
     </script>
 </body>
 <footer>
