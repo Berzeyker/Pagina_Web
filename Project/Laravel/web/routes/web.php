@@ -91,7 +91,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/account', function () {
         return view('account');
     })->name('account');
-
+    Route::get('/product', function () {
+        return view('product');
+    })->name('product');
 });
 // END PROTECTED ROUTES
 
