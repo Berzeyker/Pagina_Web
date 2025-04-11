@@ -45,7 +45,8 @@
                         </button>
                         <div class="dropdown-menu" id="dropdown1">
                             <a onclick="window.location.href='{{ route('account') }}'">Profile</a>
-                            <a href="#">Logout</a>
+                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            </form>
                         </div>
                     </div>
     
@@ -219,4 +220,9 @@
             });
         });
     </script>
+    @push('scripts')
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+    @endpush
 @endsection
