@@ -3,6 +3,24 @@
 @section('title', 'Library')
 
 @section('content')
+
+
+    @php
+    // Get 5 random games with their vertical images
+    $randomGames = DB::table('games')
+        ->join('game_images', function($join) {
+            $join->on('games.id', '=', 'game_images.game_id')
+                ->where('game_images.title_image', '=', 2);
+        })
+        ->select(
+            'games.id',
+            'games.title',
+            'game_images.image_url as vertical_image'
+        )
+        ->inRandomOrder()
+        ->limit(5)
+        ->get();
+    @endphp
 <link rel="stylesheet" href="{{ asset('css/library.css') }}">
 
 <div class="main__container">
@@ -51,21 +69,14 @@
             <div class="allgames">
                 <h2>All games</h2>
                 <div class="games-container">
-
-                        @foreach([
-                            ['title' => 'Final Fantasy VII Rebirth', 'price' => 'MXN $1,250.00', 'image' => 'topseller1.jpg', 'desc' => 'The Unkown Journey Continues... After escaping from the dystopian city of Midgar, Cloud and his friends set out on a journey across the planet. New adventures await in a vibrant and vast world in this standalone entry to the FFVII remake trilogy '],
-                            ['title' => 'Cyberpunk 2077', 'price' => 'MXN $1,299.00', 'image' => 'topseller2.jpg', 'desc' => '7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!'],
-                            ['title' => 'Warhammer 40k: Space Marine 2', 'price' => 'MXN $1,299.00', 'image' => 'topseller3.jpg', 'desc' => 'Cyberpunk 2077 is an open-world, action-adventure RPG set in Night City, a megalopolis obsessed with power, glamour, and body modification. Play as V, a cyberpunk mercenary, and take on the most powerful forces of the city in a fight for glory and survival.'],
-                            ['title' => 'Monster Hunter Wilds', 'price' => 'MXN $1,199.00', 'image' => 'topseller1.jpg', 'desc' => 'The unbridled force of nature runs wild and relentless, with environments transforming drastically from one moment to the next. This is a story of monsters and humans and their struggles to live in harmony in a world of duality.'],
-                            ['title' => 'Elden Ring: Nightreign', 'price' => 'MXN $659.00', 'image' => 'topseller1.jpg', 'desc' => 'ELDEN RING NIGHTREIGN is a standalone adventure within the ELDEN RING universe, crafted to offer players a new gaming experience by reimagining the game’s core design.']
-                        ] as $game)
-
-                     <!--va a crear las cards de acuerdo a los juegos que se encuentren en la base de datos-->
-                        <div class="game-card">
-                            <img src="#"> <!--jala el contenido de los juegos desde la base de datos-->
-                            <div class="game-title">titulo tomado de la db</div>
+                    @foreach($randomGames as $game)
+                    <div class="game-card">
+                        <a href="/product/{{ $game->id }}">
+                            <img src="https://{{ $game->vertical_image }}" alt="{{ $game->title }}" referrerpolicy="no-referrer">
+                            <div class="game-title">{{ $game->title }}</div>
                             <div class="game-detail">Details</div>
-                        </div>
+                        </a>
+                    </div>
                     @endforeach
                 </div>
             </div>
