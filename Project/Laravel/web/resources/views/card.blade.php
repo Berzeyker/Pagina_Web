@@ -144,9 +144,9 @@
         <!-- Sidebar derecho -->
         <div class="right-sidebar">
             <ul class="settings-list">
-                <li>Personal Information</li>
-                <li class="active">Payment Methods</li>
-                <li>Wishlist</li>
+                <li><a onclick="window.location.href='{{ route('account') }}'">Personal Information</a></li>
+                <li><a onclick="window.location.href='{{ route('payment') }}'">Payment Methods</a></li>
+                <li><a onclick="window.location.href='{{ route('wishlist') }}'">Wishlist</a></li>
                 <li>Security & Login</li>
             </ul>
         </div>
