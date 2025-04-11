@@ -116,10 +116,6 @@
             </div>
         </div>    
     </div>
-
-@endsection  {{-- Content section ends --}}
-
-@section('scripts')
     <script>
         const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
