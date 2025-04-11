@@ -68,13 +68,7 @@
                     <div class="game-info-container">
                         <h1>Cyberpunk 2077</h1>
                         <div class="game-meta">
-                            <p><strong>Developer:</strong> CD Projekt Red</p>
-                            <p><strong>Publisher:</strong> CD Projekt</p>
-                            <p><strong>Genre:</strong> RPG, Action, Open World, Cyberpunk</p>
-                            <p><strong>Release Date:</strong> December 10, 2020</p>
-                            <p><strong>Platforms:</strong> PC, PlayStation 5, Xbox Series X/S</p>
-                            <p><strong>Game Mode:</strong> Single-player</p>
-                            <p><strong>Engine:</strong> REDengine 4</p>
+                            <p></p> <!-- Descripcion -->
                         </div>
                         <div class="game-rating">
                             <span class="stars">★★★★☆</span>
@@ -90,20 +84,13 @@
                     <div class="purchase-card">
                         <h2>Buy Cyberpunk 2077</h2>
                         <div class="price-container">
-                            <span class="original-price">$1,599.00</span>
                             <span class="current-price">$1,299.00</span>
-                            <span class="discount">-20%</span>
                         </div>
                         <div class="editions">
                             <h3>Available Editions:</h3>
                             <div class="edition-option active">
                                 <input type="radio" id="standard" name="edition" checked>
                                 <label for="standard">Standard Edition</label>
-                            </div>
-                            <div class="edition-option">
-                                <input type="radio" id="deluxe" name="edition">
-                                <label for="deluxe">Deluxe Edition ($1,699.00)</label>
-                                <span class="edition-bonus">+ Digital Artbook & Soundtrack</span>
                             </div>
                         </div>
                         <button class="purchase-btn">
@@ -126,68 +113,12 @@
                 <section class="info-section">
                     <h2>About This Game</h2>
                     <div class="section-content">
-                        <p class="game-description">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</p>
+                        <p class="game-description"></p> <!-- descripcion larga-->
                         
                         <div class="game-trailer">
                             <iframe width="100%" height="415" src="https://www.youtube.com/embed/8X2kIfS6fb8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
-                        <h3>Key Features:</h3>
-                        <ul class="features">
-                            <li><strong>Explore Night City:</strong> A vast open world full of life, with six distinct regions each offering unique environments, stories, and characters.</li>
-                            <li><strong>Be a Cyberpunk:</strong> Customize your character with cyberware that enhances your abilities, from enhanced vision to weaponized arms.</li>
-                            <li><strong>Build Your Legend:</strong> Choose from three lifepaths (Nomad, Street Kid, or Corpo) that affect your story and relationships.</li>
-                            <li><strong>Deep RPG Mechanics:</strong> Develop your character through skills, perks, and cyberware to match your preferred playstyle.</li>
-                            <li><strong>Branching Narrative:</strong> Your choices have real consequences in both main story and side quests.</li>
-                            <li><strong>Dynamic Combat:</strong> Mix melee combat, ranged gunplay, hacking, and stealth to approach situations your way.</li>
-                            <li><strong>Expansive DLC:</strong> Includes the massive Phantom Liberty expansion with new story content and gameplay features.</li>
-                        </ul>
-
-                        <h3>Story Overview</h3>
-                        <p>In a dystopian future where mega-corporations rule and cybernetic enhancements are the norm, you take on the role of V, a mercenary navigating the dangerous streets of Night City. After a heist gone wrong, you find yourself with a rogue AI construct of legendary rockerboy Johnny Silverhand (played by Keanu Reeves) slowly overwriting your mind. Your quest to remove this digital intruder leads you through the dark underbelly of Night City, where you'll encounter gangs, corporations, and netrunners, all while deciding what kind of legend you want to become.</p>
-                    </div>
-                </section>
-
-                <!-- Specifications -->
-                <section class="info-section">
-                    <h2>Game Details</h2>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <strong>Publisher:</strong> CD Projekt
-                        </div>
-                        <div class="spec-item">
-                            <strong>Release Date:</strong> December 10, 2020 (Updated September 26, 2023)
-                        </div>
-                        <div class="spec-item">
-                            <strong>Genre:</strong> Action RPG, Open World, Cyberpunk
-                        </div>
-                        <div class="spec-item">
-                            <strong>Platform:</strong> PC, PlayStation 5, Xbox Series X/S
-                        </div>
-                        <div class="spec-item">
-                            <strong>Game Mode:</strong> Single-player
-                        </div>
-                        <div class="spec-item">
-                            <strong>Rating:</strong> Mature 17+ (Blood and Gore, Intense Violence, Nudity, Strong Language, Strong Sexual Content, Use of Drugs and Alcohol)
-                        </div>
-                        <div class="spec-item">
-                            <strong>Engine:</strong> REDengine 4
-                        </div>
-                        <div class="spec-item">
-                            <strong>DLC Included:</strong> Phantom Liberty Expansion
-                        </div>
-                        <div class="spec-item">
-                            <strong>Voice Languages:</strong> English, French, German, Spanish, etc.
-                        </div>
-                        <div class="spec-item">
-                            <strong>Text Languages:</strong> 18 supported languages
-                        </div>
-                        <div class="spec-item">
-                            <strong>Cloud Saves:</strong> Supported
-                        </div>
-                        <div class="spec-item">
-                            <strong>Controller Support:</strong> Full support
-                        </div>
                     </div>
                 </section>
 
@@ -234,35 +165,6 @@
                     </div>
                     <div class="requirements-note">
                         <p><strong>Note:</strong> System requirements may change with future updates. The game features DLSS 3.5 and FSR 2.2 support for improved performance.</p>
-                    </div>
-                </section>
-
-                <!-- Content Overview -->
-                <section class="info-section">
-                    <h2>Content Overview</h2>
-                    <div class="content-overview">
-                        <div class="content-column">
-                            <h3>Base Game Content</h3>
-                            <ul>
-                                <li>50+ hours of main story and side content</li>
-                                <li>6 distinct districts to explore</li>
-                                <li>75+ unique weapons</li>
-                                <li>100+ cyberware modifications</li>
-                                <li>Dozens of vehicles to acquire</li>
-                                <li>Multiple endings based on choices</li>
-                            </ul>
-                        </div>
-                        <div class="content-column">
-                            <h3>Phantom Liberty Expansion</h3>
-                            <ul>
-                                <li>20+ hours of new story content</li>
-                                <li>New district: Dogtown</li>
-                                <li>New gameplay mechanics</li>
-                                <li>New ending path for the main story</li>
-                                <li>New weapons and cyberware</li>
-                                <li>Idris Elba as new character Solomon Reed</li>
-                            </ul>
-                        </div>
                     </div>
                 </section>
 
