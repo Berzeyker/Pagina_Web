@@ -35,7 +35,7 @@
 
                 <div class="dropdown-buttons">
                         <div class="dropdown">
-                            <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
+                            <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')"><img src="{{ asset('svg/account.svg') }}" alt="">
                             </button>
                             <div class="dropdown-menu" id="dropdown1">
                                 <a href="#">Profile</a>
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="dropdown">
-                            <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
+                            <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')"><img src="{{ asset('svg/shoppingcart.svg') }}" alt="">
                             </button>
                             <div class="dropdown-menu" id="dropdown2">
                                 <a href="#">View Cart</a>

@@ -50,7 +50,7 @@
                     </div>
     
                     <div class="dropdown">
-                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
+                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')"><img src="{{ asset('svg/shoppingcart.svg') }}" alt="">
                         </button>
                         <div class="dropdown-menu" id="dropdown2">
                             <a onclick="window.location.href='{{ route('shoppingcart') }}'">View Cart</a>
