@@ -70,6 +70,19 @@ Route::get('create-role',[RoleController::class, 'create']);
 Route::get('view-role',[RoleController::class, 'index']);
 Route::get('update-role',[RoleController::class, 'update']);
 Route::get('delete-role',[RoleController::class, 'delete']);
+Route::get('/product/{id}', function($id) {
+    $game = DB::table('games')->find($id);
+    
+    if (!$game) {
+        abort(404);
+    }
+    
+    return view('product', [
+        'game' => $game,
+        'categories' => [],
+        'images' => DB::table('game_images')->where('game_id', $id)->get()
+    ]);
+})->name('product.show');
 
 // Registration
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');

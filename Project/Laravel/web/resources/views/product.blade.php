@@ -55,19 +55,18 @@
                 <!-- Game Header -->
                 <section class="game-header">
                     <div class="game-cover-container">
-                        <img src="img/Games/Cyberpunk2077.jpg" alt="Cyberpunk 2077 Cover" class="game-cover">
+                    <img src="https://{{ $images->where('title_image', 1)->first()->image_url }}" alt="{{ $game->title }}" class="game-cover" referrerpolicy="no-referrer">
                         <div class="game-tags">
-                            <span class="tag">Open World</span>
-                            <span class="tag">RPG</span>
-                            <span class="tag">Cyberpunk</span>
-                            <span class="tag">Mature</span>
+                            @foreach($categories as $category)
+                                <span class="tag">{{ $category }}</span>
+                            @endforeach
                         </div>
                     </div>
                     
                     <div class="game-info-container">
-                        <h1>Cyberpunk 2077</h1>
+                        <h1>{{ $game->title }}</h1>
                         <div class="game-meta">
-                            <p></p> <!-- Descripcion -->
+                            <p>{{ $game->short_desc }}</p> <!-- Descripcion -->
                         </div>
                         <div class="game-rating">
                             <span class="stars">★★★★☆</span>
@@ -81,9 +80,9 @@
                 <!-- Purchase Section -->
                 <section class="purchase-section">
                     <div class="purchase-card">
-                        <h2>Buy Cyberpunk 2077</h2>
+                        <h2>Buy {{ $game->title }}</h2> <!-- Buy + the title of the game taken from DB, for example Buy Minecraft -->
                         <div class="price-container">
-                            <span class="current-price">$1,299.00</span>
+                            <span class="current-price">MXN ${{ number_format($game->price, 2) }}</span> // price taken from DB
                         </div>
                         <div class="editions">
                             <h3>Available Editions:</h3>
@@ -112,11 +111,9 @@
                 <section class="info-section">
                     <h2>About This Game</h2>
                     <div class="section-content">
-                        <p class="game-description"></p> <!-- descripcion larga-->
+                        <p class="game-description">{{ $game->main_desc }}</p> <!-- main descripcion taken from DB -->
                         
-                        <div class="game-trailer">
-                            <iframe width="100%" height="415" src="https://www.youtube.com/embed/8X2kIfS6fb8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+
 
                     </div>
                 </section>
