@@ -11,7 +11,7 @@
         <aside class="sidebar">
             <div class="avatar-container">
                 <div class="avatar">
-                    <img src="img/Blackwork1.png" alt="User Avatar">
+                    <img src="{{asset ('images/logos/raven.png') }}" alt="User Avatar">
                 </div>
             </div>
             <nav class="sidebar-nav">
