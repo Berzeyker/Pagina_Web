@@ -93,4 +93,61 @@
         </ul>
     </div>
 </div>
+<script>
+function togglePaymentMenu() {
+    const paymentCard = event.currentTarget;
+    paymentCard.classList.toggle('active');
+    
+    // Close other open menus
+    document.querySelectorAll('.payment-card').forEach(card => {
+        if (card !== paymentCard) {
+            card.classList.remove('active');
+        }
+    });
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.payment-card')) {
+        document.querySelectorAll('.payment-card').forEach(card => {
+            card.classList.remove('active');
+        });
+    }
+});
+
+// Prevent menu from closing when clicking inside the menu
+document.querySelectorAll('.menu-options').forEach(menu => {
+    menu.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
+// Handle menu options
+document.querySelectorAll('.menu-option').forEach(option => {
+    option.addEventListener('click', (e) => {
+        const action = e.target.textContent;
+        const card = e.target.closest('.payment-card');
+        
+        switch(action) {
+            case 'Edit':
+                // Add edit functionality
+                console.log('Editing card:', card.querySelector('.card-info').textContent);
+                break;
+            case 'Remove':
+                // Add remove functionality
+                card.remove();
+                break;
+            case 'Set as default':
+                // Add set default functionality
+                document.querySelectorAll('.payment-card').forEach(c => {
+                    c.style.borderLeftColor = '#4CAF50';
+                });
+                card.style.borderLeftColor = '#FFD700';
+                break;
+        }
+        
+        card.classList.remove('active');
+    });
+});
+</script>
 @endsection
