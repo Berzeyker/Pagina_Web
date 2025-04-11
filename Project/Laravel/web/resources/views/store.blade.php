@@ -21,7 +21,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo-container">
-                <img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo">
+                <a onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo"></a>
             </div>
             <div class="sidebar-links">
                 <a onclick="window.location.href='{{ route('store') }}'">Store Page</a>
@@ -45,8 +45,7 @@
                         <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
                         </button>
                         <div class="dropdown-menu" id="dropdown1">
-                            <a href="#">Profile</a>
-                            <a href="#">Settings</a>
+                            <a onclick="window.location.href='{{ route('account') }}'">Profile</a>
                             <a href="#">Logout</a>
                         </div>
                     </div>
@@ -55,8 +54,8 @@
                         <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
                         </button>
                         <div class="dropdown-menu" id="dropdown2">
-                            <a href="#">View Cart</a>
-                            <a href="#">Checkout</a>
+                            <a onclick="window.location.href='{{ route('shoppingcart') }}'">View Cart</a>
+                            <a onclick="window.location.href='{{ route('payment') }}'">Checkout</a>
                         </div>
                     </div>
                 </div>
