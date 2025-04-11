@@ -41,12 +41,11 @@
 
                 <div class="dropdown-buttons">
                     <div class="dropdown">
-                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
+                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')"><img src="{{ asset('svg/account.svg') }}" alt="">
                         </button>
                         <div class="dropdown-menu" id="dropdown1">
                             <a onclick="window.location.href='{{ route('account') }}'">Profile</a>
                             <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                            </form>
                         </div>
                     </div>
     
