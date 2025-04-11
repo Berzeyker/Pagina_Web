@@ -24,8 +24,8 @@
                 <img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo">
             </div>
             <div class="sidebar-links">
-                <a href="#">Store Page</a>
-                <a href="#">Library</a>
+                <a onclick="window.location.href='{{ route('store') }}'">Store Page</a>
+                <a onclick="window.location.href='{{ route('library') }}'">Library</a>
                 <a href="#">Community</a>
                 <a href="#">News</a>
             </div>

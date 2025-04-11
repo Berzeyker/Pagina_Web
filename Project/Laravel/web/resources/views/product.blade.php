@@ -15,8 +15,8 @@
                 </div>
             </div>
             <nav class="sidebar-nav">
-                <a href="#">Store Page</a>
-                <a href="#">Library</a>
+                <a onclick="window.location.href='{{ route('store') }}'">Store Page</a>
+                <a onclick="window.location.href='{{ route('library') }}'">Library</a>
                 <a href="#">Community</a>
                 <a href="#">News</a>
             </nav>
@@ -37,8 +37,7 @@
                             <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
                             </button>
                             <div class="dropdown-menu" id="dropdown1">
-                                <a href="#">Profile</a>
-                                <a href="#">Settings</a>
+                                <a onclick="window.location.href='{{ route('account') }}'">Profile</a>
                                 <a href="#">Logout</a>
                             </div>
                         </div>
@@ -47,8 +46,8 @@
                             <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
                             </button>
                             <div class="dropdown-menu" id="dropdown2">
-                                <a href="#">View Cart</a>
-                                <a href="#">Checkout</a>
+                                <a onclick="window.location.href='{{ route('shoppingcart') }}'">View Cart</a>
+                                <a onclick="window.location.href='{{ route('payment') }}'">Checkout</a>
                             </div>
                         </div>
                     </div>

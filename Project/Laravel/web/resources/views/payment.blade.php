@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="menu">
-            <a href="#">Store Page</a>
+            <a onclick="window.location.href='{{ route('store') }}'">Store Page</a>
             <a onclick="window.location.href='{{ route('library') }}'">Library</a>
             <a href="#">Community</a>
             <a href="#">News</a>
