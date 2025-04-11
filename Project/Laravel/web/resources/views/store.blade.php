@@ -21,7 +21,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo-container">
-                <img src="img/Blackwork.png" alt="Mi Logo" class="sidebar-logo">
+                <img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo">
             </div>
             <div class="sidebar-links">
                 <a href="#">Store Page</a>
@@ -39,8 +39,26 @@
                     <span class="material-symbols-outlined">search</span>
                     <input type="search" placeholder="Search">
                 </div>
-                <div class="shopping-cart">
-                    <span class="material-symbols-outlined">shopping_cart</span>
+
+                <div class="dropdown-buttons">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown1')">
+                        </button>
+                        <div class="dropdown-menu" id="dropdown1">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+    
+                    <div class="dropdown">
+                        <button class="dropdown-toggle circle-btn" onclick="toggleDropdown('dropdown2')">
+                        </button>
+                        <div class="dropdown-menu" id="dropdown2">
+                            <a href="#">View Cart</a>
+                            <a href="#">Checkout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -177,6 +195,16 @@
 
     <script src="product.js"></script>
     <script>
+        function toggleDropdown(id) {
+            const menu = document.getElementById(id);
+            const allMenus = document.querySelectorAll('.dropdown-menu');
+
+          allMenus.forEach(m => {
+                if (m !== menu) m.style.display = 'none';
+            });
+
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const sidebar = document.querySelector('.sidebar');
