@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-    <link rel="stylesheet" href="CSS/product_page.css">
-</head>
-<body>
+@extends('layouts.app', ['withoutNavbar' => true])
+
+@section('title', 'Product')
+
+@section('content')
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="{{ asset('css/product.css') }}">
+
     <div class="main-container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -410,16 +407,15 @@
         </main>
     </div>
 <script>
-                function toggleDropdown(id) {
-                const menu = document.getElementById(id);
-                const allMenus = document.querySelectorAll('.dropdown-menu');
+    function toggleDropdown(id) {
+        const menu = document.getElementById(id);
+        const allMenus = document.querySelectorAll('.dropdown-menu');
 
-                allMenus.forEach(m => {
-                    if (m !== menu) m.style.display = 'none';
-                });
+        allMenus.forEach(m => {
+            if (m !== menu) m.style.display = 'none';
+        });
 
-                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-            }
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
 </script>
-</body>
-</html>
+@endsection

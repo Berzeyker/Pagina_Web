@@ -92,4 +92,16 @@
         </div>
     </div>
 </div>
+<script>
+    function toggleDropdown(id) {
+        const menu = document.getElementById(id);
+        const allMenus = document.querySelectorAll('.dropdown-menu');
+
+        allMenus.forEach(m => {
+            if (m !== menu) m.style.display = 'none';
+        });
+
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
 @endsection
