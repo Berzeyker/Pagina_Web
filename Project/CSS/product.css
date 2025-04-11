@@ -21,17 +21,18 @@ body {
 .sidebar {
     width: 15%;
     background-color: #1e1e1e;
-    padding: 3.5rem;
+    padding: 3.5rem 2rem;
     position: fixed;
     height: 100vh;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo-container {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
 }
 
 .sidebar-logo {
@@ -74,6 +75,28 @@ body {
     transform: scaleX(1);
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #303030;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    z-index: 200;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-btn span {
+    font-size: 1.5rem;
+}
+
 /* Content Area */
 .content {
     width: 85%;
@@ -82,6 +105,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.875rem;
+    transition: margin-left 0.3s ease;
 }
 
 /* Navigation Bar */
@@ -89,6 +113,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .searchbar {
@@ -235,6 +260,7 @@ body {
     overflow-x: auto;
     padding: 0.625rem;
     scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .carousel::-webkit-scrollbar {
@@ -287,19 +313,228 @@ body {
     margin: 0;
 }
 
+/* Helper Classes */
+.sidebar-active {
+    transform: translateX(0) !important;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 90;
+}
+
+.overlay.active {
+    display: block;
+}
+
 /* Responsive Styles */
+@media (max-width: 1400px) {
+    .sidebar {
+        width: 20%;
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .content {
+        width: 80%;
+        margin-left: 20%;
+        padding: 2.5rem 2.5rem 2.5rem 0;
+    }
+    
+    .sidebar-links a {
+        font-size: 1.25rem;
+    }
+    
+    .featured {
+        height: 25rem;
+    }
+    
+    .game-card {
+        width: 180px;
+        min-width: 180px;
+        height: 270px;
+    }
+}
+
 @media (max-width: 1200px) {
+    .sidebar {
+        width: 25%;
+    }
+    
+    .content {
+        width: 75%;
+        margin-left: 25%;
+        padding: 2rem 2rem 2rem 0;
+    }
+    
     .logo-container {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
     
     .sidebar-logo {
         max-height: 60px;
     }
+    
+    .searchbar {
+        width: 60%;
+    }
+    
+    .featured-content {
+        flex-direction: column;
+    }
+    
+    .featured-image {
+        width: 100%;
+        height: 60%;
+    }
+    
+    .featured-secondary-image {
+        width: 100%;
+        height: 35%;
+    }
+    
+    .game-card {
+        width: 160px;
+        min-width: 160px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 280px;
+        transform: translateX(-100%);
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .content {
+        width: 100%;
+        margin-left: 0;
+        padding: 2rem;
+    }
+    
+    .searchbar {
+        width: 70%;
+        margin-left: 3.5rem;
+    }
+    
+    .featured {
+        height: 22rem;
+        margin-top: 1rem;
+    }
+    
+    .game-card {
+        width: 150px;
+        min-width: 150px;
+        height: 225px;
+    }
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .searchbar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 3.5rem;
+    }
+    
+    .shopping-cart {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .featured {
+        height: auto;
+    }
+    
+    .featured-content {
+        height: auto;
+    }
+    
+    .featured-image, 
+    .featured-secondary-image {
+        height: 200px;
+    }
+    
+    .game-card {
+        width: 140px;
+        min-width: 140px;
+        height: 210px;
+    }
+    
+    .special-offers h2,
+    .for-you h2,
+    .categories h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        padding: 2rem 1rem;
+        width: 250px;
+    }
+    
+    .content {
+        padding: 1.5rem;
+    }
+    
+    .logo-container {
+        margin-bottom: 2rem;
+    }
+    
     .sidebar-logo {
         max-height: 50px;
+    }
+    
+    .sidebar-links {
+        gap: 2rem;
+    }
+    
+    .sidebar-links a {
+        font-size: 1.1rem;
+    }
+    
+    .featured-image, 
+    .featured-secondary-image {
+        height: 180px;
+    }
+    
+    .carousel {
+        gap: 0.75rem;
+        padding: 0.5rem;
+    }
+    
+    .game-card {
+        width: 120px;
+        min-width: 120px;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+    
+    .special-offers h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .game-card {
+        width: 110px;
+        min-width: 110px;
+        height: 165px;
     }
 }

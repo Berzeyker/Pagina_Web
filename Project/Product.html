@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
+    
+    <!-- Backdrop Overlay -->
+    <div class="overlay"></div>
+    
     <div class="main-container">
         <!-- Sidebar -->
         <div class="sidebar">
@@ -171,5 +179,32 @@
     </div>
 
     <script src="product.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.overlay');
+            
+            // Toggle sidebar on mobile menu button click
+            mobileMenuBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('sidebar-active');
+                overlay.classList.toggle('active');
+            });
+            
+            // Close sidebar when clicking on overlay
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('sidebar-active');
+                overlay.classList.remove('active');
+            });
+            
+            // Close sidebar when window is resized to desktop size
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 992) {
+                    sidebar.classList.remove('sidebar-active');
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
