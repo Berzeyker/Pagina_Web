@@ -28,6 +28,7 @@ class RouteServiceProvider extends ServiceProvider
     public const ARTICLE = '/article';
     public const WISHLIST = '/wishlist'; // Añade esto con la ruta
     public const PRODUCT = '/product'; // Añade esto con la ruta    
+    public const STORE = '/store';
     /**
      * The controller namespace for the application.
      *
