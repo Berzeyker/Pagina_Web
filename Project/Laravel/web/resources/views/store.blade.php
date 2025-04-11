@@ -21,7 +21,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo-container">
-                <img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo">
+                <a onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo"></a>
             </div>
             <div class="sidebar-links">
                 <a onclick="window.location.href='{{ route('store') }}'">Store Page</a>

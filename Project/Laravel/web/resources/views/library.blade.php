@@ -10,7 +10,7 @@
     <div class="sidebar">
         <div class="avatar-container-left">
             <div class="avatar-left">
-                <img src="{{ asset('images/logos/raven.png') }}" alt="Avatar"> <!--logo principal de la pagina-->
+                <a onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt="Avatar"></a> <!--logo principal de la pagina-->
             </div>
         </div>
         <div class="sidebar__container">

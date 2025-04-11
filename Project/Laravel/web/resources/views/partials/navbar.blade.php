@@ -2,7 +2,7 @@
 <nav class="navbar">
     <div class="logo" onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt=""></div>
     <ul class="nav-links">
-        <li><a href="#">SHOP</a></li>
+        <li><a onclick="window.location.href='{{ route('store') }}'">SHOP</a></li>
         <li><a onclick="window.location.href='{{ route('article') }}'">NEWS</a></li>
         <li><a href="#">COMMUNITY</a></li>
         <li><a onclick="window.location.href='{{ route('aboutus') }}'">ABOUT US</a></li>

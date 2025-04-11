@@ -11,7 +11,7 @@
         <aside class="sidebar">
             <div class="avatar-container">
                 <div class="avatar">
-                    <img src="{{asset ('images/logos/raven.png') }}" alt="User Avatar">
+                    <a onclick="window.location.href='{{ route('home') }}'"><img src="{{asset ('images/logos/raven.png') }}" alt="User Avatar"></a>
                 </div>
             </div>
             <nav class="sidebar-nav">

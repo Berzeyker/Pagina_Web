@@ -9,7 +9,7 @@
         <!-- Barra lateral izquierda -->
         <div class="left-sidebar">
             <div class="avatar-left">
-                <img src="{{ asset('images/logos/raven.png') }}" alt="Avatar">
+                <a onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt="Avatar"></a>
             </div>
             
             <div class="menu-left">
