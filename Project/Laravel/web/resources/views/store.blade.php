@@ -21,7 +21,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo-container">
-                <a onclick="window.location.href='{{ route('home') }}'"><img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo"></a>
+                <img src="{{ asset('images/logos/raven.png') }}" alt="Mi Logo" class="sidebar-logo">
             </div>
             <div class="sidebar-links">
                 <a onclick="window.location.href='{{ route('store') }}'">Store Page</a>
@@ -61,21 +61,54 @@
                     </div>
                 </div>
             </div>
-            
+            @php
+            // Get all games with their images
+            $games = DB::table('games')
+                ->join('game_images', 'games.id', '=', 'game_images.game_id')
+                ->select(
+                    'games.id',
+                    'games.title',
+                    'game_images.image_url',
+                    'game_images.title_image'
+                )
+                ->get()
+                ->groupBy('id');
+
+            // Shuffle and take needed games
+            $shuffledGames = $games->shuffle();
+
+            // Featured games (2 unique games with title_image = 1)
+            $featured1 = $shuffledGames->shift()->where('title_image', 1)->first();
+            $featured2 = $shuffledGames->shift()->where('title_image', 1)->first();
+
+            // Special offers (6 unique games with title_image = 2)
+            $specialOffers = $shuffledGames->take(6)->map(function($game) {
+                return $game->where('title_image', 2)->first();
+            });
+
+            // For You section (6 different unique games with title_image = 2)
+            $forYou = $shuffledGames->slice(6, 6)->map(function($game) {
+                return $game->where('title_image', 2)->first();
+            });
+            @endphp
             <!-- Featured Games Section -->
             <div class="featured">
                 <div class="featured-content">
                     <div class="featured-image">
-                        <img src="img/Games/r6.jpeg" alt="Featured Game">
-                        <div class="selection-overlay">
-                            <span class="material-symbols-outlined">add_circle</span>
-                        </div>
+                        <a href="/product/{{ $featured1->id }}">
+                            <img src="https://{{ $featured1->image_url }}" style="width: 100%; height: 600px;" alt="{{ $featured1->title }}">
+                            <div class="selection-overlay">
+                                <span class="material-symbols-outlined">add_circle</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="featured-secondary-image">
-                        <img src="img/Games/Cyberpunk2077.jpg" alt="Secondary Game Image">
-                        <div class="selection-overlay">
-                            <span class="material-symbols-outlined">add_circle</span>
-                        </div>
+                        <a href="/product/{{ $featured2->id }}">
+                            <img src="https://{{ $featured2->image_url }}" style="width: 455px; height: 360px;" alt="{{ $featured2->title }}">
+                            <div class="selection-overlay">
+                                <span class="material-symbols-outlined">add_circle</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -84,36 +117,15 @@
             <div class="special-offers">
                 <h2>Special Offers</h2>
                 <div class="carousel">
+                    @foreach($specialOffers as $game)
                     <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/GreedFall.jpg" alt="GreedFall">
-                        </div>
+                        <a href="/product/{{ $game->id }}">
+                            <div class="image-container">
+                                <img src="https://{{ $game->image_url }}" alt="{{ $game->title }}" referrerpolicy="no-referrer" loading="lazy">
+                            </div>
+                        </a>
                     </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/Cyberpunk.jpg" alt="Cyberpunk">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -121,39 +133,17 @@
             <div class="for-you">
                 <h2>For You</h2>
                 <div class="carousel">
+                    @foreach($forYou as $game)
                     <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/r6.jpeg" alt="Rainbow Six Siege">
-                        </div>
+                        <a href="/product/{{ $game->id }}">
+                            <div class="image-container">
+                                <img src="https://{{ $game->image_url }}" alt="{{ $game->title }}" referrerpolicy="no-referrer" loading="lazy">
+                            </div>
+                        </a>
                     </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/7days.avif" alt="7 Days to Die">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/7days.avif" alt="7 Days to Die">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/7days.avif" alt="7 Days to Die">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/7days.avif" alt="7 Days to Die">
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="image-container">
-                            <img src="img/Games/7days.avif" alt="7 Days to Die">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
-
             <!-- Categories Section -->
             <div class="categories">
                 <h2>Browse by Category</h2>
