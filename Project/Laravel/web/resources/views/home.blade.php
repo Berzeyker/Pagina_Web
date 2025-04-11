@@ -75,7 +75,7 @@
                 <h4 class="title__topseller">{{ $game->title }}</h4>
                 <h5 class="price__topseller">MXN ${{ number_format($game->price, 2) }}</h5>
                 <p class="text__topseller">{{ $game->desc }}</p>
-                <button class="button__topseller" onclick="window.location.href='{{ route('login') }}'">Store Page</button>
+                <button class="button__topseller" onclick="window.location.href='{{ route('store') }}'">Store Page</button>
             </div>
         </div>
     @endforeach
@@ -96,6 +96,7 @@
                 <a href="#" class="card-link">READ MORE</a>
               </div>
             </div>
+        </div>
     </div>
 
     <div class="reviews">
