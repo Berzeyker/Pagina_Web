@@ -34,7 +34,7 @@ body, .main__container, .sidebar, .content, .right-sidebar {
     height: 100vh;
     position: fixed;
     padding: 56px;
-    background-color: #1a1a1a;
+    background-color: #1e1e1e;
 }
 
 .sidebar__container {
