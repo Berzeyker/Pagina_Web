@@ -93,7 +93,7 @@
                 <p class="card-description">
                   The newly announced Nintendo Switch 2, releasing on June 2025.
                 </p>
-                <a href="#" class="card-link">READ MORE</a>
+                <a onclick="window.location.href='{{ route('article') }}'" class="card-link">READ MORE</a>
               </div>
             </div>
         </div>
