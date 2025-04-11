@@ -75,7 +75,7 @@
                 <h4 class="title__topseller">{{ $game->title }}</h4>
                 <h5 class="price__topseller">MXN ${{ number_format($game->price, 2) }}</h5>
                 <p class="text__topseller">{{ $game->desc }}</p>
-                <button class="button__topseller">Store Page</button>
+                <button class="button__topseller" onclick="window.location.href='{{ route('login') }}'">Store Page</button>
             </div>
         </div>
     @endforeach
@@ -85,9 +85,17 @@
             <h2 class="title__news">News & Notices</h2>
             <h3 class="subtitle__news">What is happening in the community</h3>
         </div>
-        <div class="carousel__news">
-            <img src="{{ asset('images/news.jpg') }}" alt="News">
-        </div>
+        <div class="news-card">
+            <img src="{{ asset('images/nintendo.jpg') }}" alt="Nintendo Switch 2" class="card-image">
+            <div class="card-overlay">
+              <div class="card-content">
+                <h2 class="card-title">Nintendo Switch 2</h2>
+                <p class="card-description">
+                  The newly announced Nintendo Switch 2, releasing on June 2025.
+                </p>
+                <a href="#" class="card-link">READ MORE</a>
+              </div>
+            </div>
     </div>
 
     <div class="reviews">
@@ -96,9 +104,45 @@
             <h3 class="subtitle__reviews">What the people say</h3>
         </div>
         <div class="carousel__reviews">
-            <img src="{{ asset('images/review1.jpg') }}" alt="Review 1">
-            <img src="{{ asset('images/review2.jpg') }}" alt="Review 2">
-            <img src="{{ asset('images/review3.jpg') }}" alt="Review 3">
+        <div class="testimonial-card">
+                <h2 class="testimonial-title">The best shop of all time</h2>
+                <div class="testimonial-user">
+                  <img src="user.jpg" alt="User photo" class="user-avatar">
+                  <div class="user-info">
+                    <p class="user-name">Laura Fragoso</p>
+                    <p class="user-subtitle">Purchase: Elden Ring</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  "I bought a code for Elden Ring, and everything worked perfectly. The process was super fast and secure. I'll definitely buy here again!"
+                </p>
+              </div>
+              <div class="testimonial-card">
+                <h2 class="testimonial-title">Incredible service</h2>
+                <div class="testimonial-user">
+                  <img src="user.jpg" alt="User photo" class="user-avatar">
+                  <div class="user-info">
+                    <p class="user-name">Carlos Rivera</p>
+                    <p class="user-subtitle">Purchase: Resident Evil 2</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                    "I was a bit skeptical at first, but the code arrived instantly and worked flawlessly. Super happy with my purchase!"
+                </p>
+              </div>
+              <div class="testimonial-card">
+                <h2 class="testimonial-title">Highly recommended</h2>
+                <div class="testimonial-user">
+                  <img src="user.jpg" alt="User photo" class="user-avatar">
+                  <div class="user-info">
+                    <p class="user-name">Alice</p>
+                    <p class="user-subtitle">Purchase: Cyberpunk</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                    "Amazing prices and very reliable. I’ve already bought two games here and both experiences were smooth and fast."
+                </p>
+              </div>
         </div>
     </div>
 
