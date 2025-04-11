@@ -129,13 +129,13 @@
                     </div>
                     
                     <!-- Botón de envío -->
-                    <button type="button" class="add-payment-btn" onclick="handlePurchase()">Purchase</button>
+                    <button type="button" class="add-payment-btn" onclick="handlePurchase()">Save Payment Method</button>
                 </form>
             </div>
             <div class="success-popup" id="successPopup">
                 <div class="popup-content">
-                    <h3>🎉 Purchase Successful</h3>
-                    <p>Your transaction has been completed successfully.</p>
+                    <h3>Payment Added</h3>
+                    <p>Your information has been successfully registered.</p>
                     <button onclick="closePopup()">OK</button>
                 </div>
             </div>
