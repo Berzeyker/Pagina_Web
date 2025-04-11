@@ -154,13 +154,13 @@
                             </div>
                             
                             <div class="tax-note">Sales tax will be calculated during checkout</div>
-                            <button class="payment-button">Continue to payment</button>
+                            <button class="payment-button" onclick="window.location.href='{{ route('payment') }}'">Continue to payment</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="cart-footer">
-                    <button class="continue-shopping-btn">Continue Shopping</button>
+                    <button class="continue-shopping-btn" onclick="window.location.href='{{ route('store') }}'">Continue Shopping</button>
                 </div>
             </div>
         </div>
